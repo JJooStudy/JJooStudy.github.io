@@ -2,10 +2,10 @@
 
 
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
+title:          jjoostudy
+description:    "jjoostudy"
 baseurl:        "/"
-url:            "https://chesterhow.github.io"
+url:            "https://jjoostudy.github.io/"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
