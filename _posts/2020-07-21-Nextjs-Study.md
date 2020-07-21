@@ -38,7 +38,7 @@ components
 
 component/ButtonDiv.js : jsx, props, state 등 데이터 처리 및 이벤트에 대한 내용을 담고 있음
 
-{% highlight javascript %}
+{% highlight react %}
 class ButtonDiv extends Component {
     render(){
         const { title, subTitle, data , handleSelect, selected, multiple } = this.props
