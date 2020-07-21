@@ -24,7 +24,7 @@ comments: true
 
 ## 2. 컴포넌트의 구조화(모듈화)
 
-{% highlight ruby %}
+{% highlight text %}
 components
 ├─Button
   ├─ButtonDiv.js
