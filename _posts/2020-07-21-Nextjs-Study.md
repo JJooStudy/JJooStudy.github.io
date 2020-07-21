@@ -301,6 +301,48 @@ export default Step2;
 
 ## 7. 6에서 추가된 <PetItem />안의 버튼들이 개별 작동할 수 있도록 수정
 
+: 현재 수정중
+
+components/PetItem/PetItem.js
+: Step2.js에서 불러오는 <PetItem />들 안의 <PhotoBox />, <ButtonDiv />가 각 컨포넌트별로 개별 작동 할 수 있도록 추가 수정 필요 
+
+{% highlight ruby %}
+class PetItem extends Component {
+    state = {
+        display:true
+        
+    }
+    render(){
+        const { handleSelect, selected, pet } = this.props
+        console.log("selected : ",selected)
+        const setting = {
+            dots: false,
+            infinite:false,
+            arrow:false,
+            initialSlide: 0,
+            speed:500,
+            slidesToShow:3.2,
+            slidesToScroll:1,
+        }
+        return (
+            <>
+                <Title underLine onClick={() => this.setState({display: !this.state.display})}>아이 {pet.id+1} 정보 *</Title>
+                <div style={{
+                        display: this.state.display ? "block" : "none"
+                    }}
+                >
+                    <PhotoBox />
+                    <ButtonDiv handleSelect={handleSelect} selected={selected} data={gender} />
+                    <Inputs label="아이에 대한 설명을 작성해 주세요" />
+                    <Inputs label="분양 금액을 입력해 주세요" />
+                    <SaveDeleteDiv />
+                </div>
+            </>
+        )
+    }
+}
+export default PetItem;
+{% endhighlight %}
 
 ## 8. 사진 추가 기능 
 
