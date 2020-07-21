@@ -38,7 +38,7 @@ components
 
 component/ButtonDiv.js : jsx, props, state 등 데이터 처리 및 이벤트에 대한 내용을 담고 있음
 
-{% highlight ruby %}
+{% highlight javascript %}
 class ButtonDiv extends Component {
     render(){
         const { title, subTitle, data , handleSelect, selected, multiple } = this.props
@@ -68,7 +68,7 @@ class ButtonDiv extends Component {
 
 component/Buttons.js : Button에 관련된 styled-components를 담고 잇음 
 
-{% highlight ruby %}
+{% highlight javascript %}
 export const Button = styled.button`
     flex:1 1 calc(33.33% - 10px);
     margin:0 5px;
@@ -110,7 +110,7 @@ export const Button = styled.button`
 
 container/Step1.js
 
-{% highlight ruby %}
+{% highlight javascript %}
 class Step1 extends Component {
     state = {
         selected: 0,
@@ -163,7 +163,7 @@ export default Step1;
 - components/Button/ButtonDiv.js
 : Step1.js에서 받아오는 props에 따라 다른 이벤트로 작동할 수 있게.
 
-{% highlight ruby %}
+{% highlight javascript %}
 class ButtonDiv extends Component {
     render(){
         const { title, subTitle, data , handleSelect, selected, multiple } = this.props
@@ -199,7 +199,7 @@ class ButtonDiv extends Component {
 
 pages/index.js
 
-{% highlight ruby %}
+{% highlight javascript %}
 class Home extends React.Component {
   state = {
     step : null
@@ -236,7 +236,7 @@ export default Home
 
 containers/Step1.js
 
-{% highlight ruby %}
+{% highlight javascript %}
 class Step1 extends Component {
     render(){
         const { handleNextStep } = this.props
@@ -268,7 +268,7 @@ export default Step1;
 containers/Step2.js
 : ButtonAdd 버튼이 눌릴때 마다 <PetItem /> 생성 
 
-{% highlight ruby %}
+{% highlight javascript %}
 class Step2 extends Component {
     state = {
         // selected: 0,
@@ -324,7 +324,7 @@ export default Step2;
 components/PetItem/PetItem.js
 : Step2.js에서 불러오는 <PetItem />들 안의 <PhotoBox />, <ButtonDiv />가 각 컨포넌트별로 개별 작동 할 수 있도록 추가 수정 필요 
 
-{% highlight ruby %}
+{% highlight javascript %}
 class PetItem extends Component {
     state = {
         display:true
