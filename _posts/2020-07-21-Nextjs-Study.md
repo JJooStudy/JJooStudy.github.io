@@ -335,19 +335,10 @@ class PetItem extends Component {
     render(){
         const { handleSelect, selected, pet } = this.props
         console.log("selected : ",selected)
-        const setting = {
-            dots: false,
-            infinite:false,
-            arrow:false,
-            initialSlide: 0,
-            speed:500,
-            slidesToShow:3.2,
-            slidesToScroll:1,
-        }
         return (
             <>
                 <Title underLine onClick={() => this.setState({display: !this.state.display})}>아이 {pet.id+1} 정보 *</Title>
-                <div style={{display: this.state.display ? "block" : "none"}}>
+                <div>
                     <PhotoBox />
                     <ButtonDiv handleSelect={handleSelect} selected={selected} data={gender} />
                     <Inputs label="아이에 대한 설명을 작성해 주세요" />
