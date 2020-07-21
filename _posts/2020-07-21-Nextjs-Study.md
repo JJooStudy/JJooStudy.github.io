@@ -5,12 +5,16 @@ author: "JJoo"
 comments: true
 ---
 
-스터디 목표
+## 스터디 목표
 
 : state & props를 자유자재로 사용해보자.
 
-작업 시안
+
+
+## 작업 시안
 ![Design](https://github.com/JJooStudy/NextjsStudy/blob/master/static/design.png/700 "Design")
+
+
 
 ## 1. Next.js 기본 구조 파악
 - Next.js의 디렉토리 구조 파악
@@ -30,6 +34,7 @@ components
   ├─Input.js
   └─Inputs.js
 {% endhighlight %}
+
 
 component/ButtonDiv.js : jsx, props, state 등 데이터 처리 및 이벤트에 대한 내용을 담고 있음
 
@@ -59,6 +64,7 @@ class ButtonDiv extends Component {
     }
 }
 {% endhighlight %}
+
 
 component/Buttons.js : Button에 관련된 styled-components를 담고 잇음 
 
@@ -94,11 +100,13 @@ export const Button = styled.button`
 {% endhighlight %}
 
 
+
 ## 3. 같은 Button 컴포넌트 호출 후 개별 작동
 
 : 재사용성을 높이기 위한 작업 훈련
 
 - 한 화면에 동일한 자식 컴포넌트인 ButtonDiv.js를 다중 생성해 하나의 컴포넌트에서만 다중 선택이 가능하도록 구현
+
 
 container/Step1.js
 
@@ -151,6 +159,7 @@ class Step1 extends Component {
 export default Step1;
 {% endhighlight %}
 
+
 - components/Button/ButtonDiv.js
 : Step1.js에서 받아오는 props에 따라 다른 이벤트로 작동할 수 있게.
 
@@ -182,9 +191,11 @@ class ButtonDiv extends Component {
 {% endhighlight %}
 
 
+
 ## 4. 페이지 변경없이 한 화면에서 step1, step2 화면 변경 가능
 
 : state, props에 대한 이해를 위한 작. 자식인 Step1.js에서 state를 받아 index.js에서 화면 변경
+
 
 pages/index.js
 
@@ -222,6 +233,7 @@ class Home extends React.Component {
 export default Home
 {% endhighlight %}
 
+
 containers/Step1.js
 
 {% highlight ruby %}
@@ -241,14 +253,17 @@ export default Step1;
 {% endhighlight %}
 
 
+
 ## 5. common/db.js에 데이터 분리
 
 : static한 데이터 관리
 
 
+
 ## 6. 각 개체에 대한 정보(사진들, 성별정보, 설명, 금액 등)를 담는 컴포넌트를 원하는 만큼 추가
 
 : 자식이 여러개가 존재하는 컴포넌트를 다중 생성했을 때 state를 다루는 방식에 대한 공부
+
 
 containers/Step2.js
 : ButtonAdd 버튼이 눌릴때 마다 <PetItem /> 생성 
@@ -300,9 +315,11 @@ export default Step2;
 {% endhighlight %}
 
 
+
 ## 7. 6에서 추가된 <PetItem />안의 버튼들이 개별 작동할 수 있도록 수정
 
 : 현재 수정중
+
 
 components/PetItem/PetItem.js
 : Step2.js에서 불러오는 <PetItem />들 안의 <PhotoBox />, <ButtonDiv />가 각 컨포넌트별로 개별 작동 할 수 있도록 추가 수정 필요 
@@ -345,7 +362,10 @@ class PetItem extends Component {
 export default PetItem;
 {% endhighlight %}
 
+
+
 ## 8. 사진 추가 기능 
+
 
 
 ## 9. 마지막 분양글 등록하기 버튼 클릭시 step1과 step2에서 받은 정보를 한번에 저장.
