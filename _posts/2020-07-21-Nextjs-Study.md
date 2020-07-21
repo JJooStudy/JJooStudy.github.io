@@ -347,10 +347,7 @@ class PetItem extends Component {
         return (
             <>
                 <Title underLine onClick={() => this.setState({display: !this.state.display})}>아이 {pet.id+1} 정보 *</Title>
-                <div style={{
-                        display: this.state.display ? "block" : "none"
-                    }}
-                >
+                <div style={{display: this.state.display ? "block" : "none"}}>
                     <PhotoBox />
                     <ButtonDiv handleSelect={handleSelect} selected={selected} data={gender} />
                     <Inputs label="아이에 대한 설명을 작성해 주세요" />
