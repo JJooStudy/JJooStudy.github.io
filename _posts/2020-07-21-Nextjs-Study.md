@@ -9,7 +9,8 @@ comments: true
 
 : state & props를 자유자재로 사용해보자.
 
-
+작업 시안
+![Design](https://github.com/JJooStudy/NextjsStudy/blob/master/static/design.png/700 "Design")
 
 ## 1. Next.js 기본 구조 파악
 - Next.js의 디렉토리 구조 파악
