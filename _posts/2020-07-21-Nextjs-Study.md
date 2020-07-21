@@ -12,7 +12,7 @@ comments: true
 
 
 ## 작업 시안
-![Design](https://github.com/JJooStudy/NextjsStudy/blob/master/static/design.png/700 "Design")
+![Design](https://github.com/JJooStudy/NextjsStudy/blob/master/static/design.png/764x644 "Design")
 
 
 
