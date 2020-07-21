@@ -16,6 +16,10 @@ comments: true
 
 
 
+## 작업물 : [github.com/JJooStudy](https://github.com/JJooStudy/NextjsStudy)
+
+
+
 ## 1. Next.js 기본 구조 파악
 - Next.js의 디렉토리 구조 파악
 - 코드 스플리팅
@@ -105,7 +109,7 @@ export const Button = styled.button`
 
 : 재사용성을 높이기 위한 작업 훈련
 
-- 한 화면에 동일한 자식 컴포넌트인 ButtonDiv.js를 다중 생성해 하나의 컴포넌트에서만 다중 선택이 가능하도록 구현
+- 한 화면에(ex. Step1.js) 동일한 자식 컴포넌트인 ButtonDiv.js를 다중 생성해 하나의 ButtonDiv에서만 다중 선택이 가능하도록 구현
 
 
 container/Step1.js
@@ -161,7 +165,7 @@ export default Step1;
 
 
 - components/Button/ButtonDiv.js
-: Step1.js에서 받아오는 props에 따라 다른 이벤트로 작동할 수 있게.
+: Step1.js에서 받아오는 props.multiple의 값에 따라 multiple값이 true이면 selected.includes(item.id), false면 selected === item.id가 적용되어 버튼의 다중선택이 될 수 있게 구현. 
 
 {% highlight react %}
 class ButtonDiv extends Component {
@@ -173,8 +177,6 @@ class ButtonDiv extends Component {
                 <ButtonWrap>
                     {
                         data.map((item, idx) => {
-                            // console.log('selected:',selected)
-                            // console.log('multiple:',multiple)
                             const active = multiple
                                 ? selected.includes(item.id)
                                 : selected === item.id
@@ -194,7 +196,7 @@ class ButtonDiv extends Component {
 
 ## 4. 페이지 변경없이 한 화면에서 step1, step2 화면 변경 가능
 
-: state, props에 대한 이해를 위한 작. 자식인 Step1.js에서 state를 받아 index.js에서 화면 변경
+: state, props에 대한 이해를 위한 작업. 자식인 Step1.js에서 state를 받아 index.js에서 화면 변경
 
 
 pages/index.js
@@ -266,7 +268,7 @@ export default Step1;
 
 
 containers/Step2.js
-: ButtonAdd 버튼이 눌릴때 마다 <PetItem /> 생성 
+: ButtonAdd 버튼이 눌릴때 마다 PetItem 생성 
 
 {% highlight react %}
 class Step2 extends Component {
@@ -316,13 +318,13 @@ export default Step2;
 
 
 
-## 7. 6에서 추가된 <PetItem />안의 버튼들이 개별 작동할 수 있도록 수정
+## 7. 6에서 추가된 PetItem안의 버튼들이 개별 작동할 수 있도록 수정
 
 : 현재 수정중
 
 
 components/PetItem/PetItem.js
-: Step2.js에서 불러오는 <PetItem />들 안의 <PhotoBox />, <ButtonDiv />가 각 컨포넌트별로 개별 작동 할 수 있도록 추가 수정 필요 
+: Step2.js에서 불러오는 PetItem들 안의 PhotoBox, ButtonDiv가 각 컨포넌트별로 개별 작동 할 수 있도록 추가 수정 필요 
 
 {% highlight react %}
 class PetItem extends Component {
@@ -365,7 +367,7 @@ export default PetItem;
 
 
 ## 8. 사진 추가 기능 
-
+![AddImagesDesign](https://raw.githubusercontent.com/JJooStudy/NextjsStudy/master/static/addImages.png)
 
 
 ## 9. 마지막 분양글 등록하기 버튼 클릭시 step1과 step2에서 받은 정보를 한번에 저장.
