@@ -8,6 +8,14 @@ comments: true
 Var  : function-scoped
 Let, const : block-scoped
 
+* 함수 스코프(Function scope)
+
+ : 함수 내에서 선언된 변수는 함수 내에서만 유효하며 함수 외부에서는 참조할 수 없다. 즉, 함수 내부에서 선언한 변수는 지역 변수이며 함수 외부에서 선언한 변수는 모두 전역 변수이다.
+
+* 블록 스코프(Block scope)
+ : 모든 코드 블록(함수, if 문, for 문, while 문, try/catch 문 등) 내에서 선언된 변수는 코드 블록 내에서만 유효하며 코드 블록 외부에서는 참조할 수 없다. 즉, 코드 블록 내부에서 선언한 변수는 지역 변수이다.
+
+
 ## 1. var(function-scoped)
 
 : var 는 function 단위로 변수 hoisting 현상 발생
