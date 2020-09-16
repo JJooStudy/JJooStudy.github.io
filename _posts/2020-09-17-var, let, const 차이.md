@@ -6,6 +6,7 @@ comments: true
 ---
 
 Var  : function-scoped
+
 Let, const : block-scoped
 
 * 함수 스코프(Function scope)
@@ -13,6 +14,7 @@ Let, const : block-scoped
  : 함수 내에서 선언된 변수는 함수 내에서만 유효하며 함수 외부에서는 참조할 수 없다. 즉, 함수 내부에서 선언한 변수는 지역 변수이며 함수 외부에서 선언한 변수는 모두 전역 변수이다.
 
 * 블록 스코프(Block scope)
+
  : 모든 코드 블록(함수, if 문, for 문, while 문, try/catch 문 등) 내에서 선언된 변수는 코드 블록 내에서만 유효하며 코드 블록 외부에서는 참조할 수 없다. 즉, 코드 블록 내부에서 선언한 변수는 지역 변수이다.
 
 
@@ -65,6 +67,7 @@ a = 'zxc' // 변수가 이미 할당되어 있어서 불가능
 
 : let, const 는 block 단위로 hoisting 발생 
 
+
 {% highlight javascript %}
 function findUser(id) {
   if (id > 0) {
@@ -79,14 +82,16 @@ function findUser(id) {
 }
 {% endhighlight %}
 
-* let 대신 var였다면 undefined -> failureMsg 가 선언된 적이 없어도 상단으로 hoisting 되서 에러가 안뜨고undefined 출력함 
+: let 대신 var였다면 undefined -> failureMsg 가 선언된 적이 없어도 상단으로 hoisting 되서 에러가 안뜨고undefined 출력함 
+
 
 {% highlight javascript %}
 c = 'asd'  //declaredReferenceError: c is not defined
 let c 
 {% endhighlight %}
 
-* let값을 할당하기 전에 변수가 선되어서 에러가 발생 
+: let값을 할당하기 전에 변수가 선되어서 에러가 발생 
+
 
 {% highlight javascript %}
 let a 
