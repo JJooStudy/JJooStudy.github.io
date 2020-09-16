@@ -110,7 +110,9 @@ number // ▶ (5) [4, 7, 6, 18, 20]
 {% endhighlight %}
 
 : Json데이터의 자료형은 Hashmap, array ~ value(String, int , double …)까지 다양하게 표현이 가능
-http://www.json.org/json-ko.html 참고 
+
+[http://www.json.org/json-ko.html](http://www.json.org/json-ko.html) 참고
+  
 
 : JSON 데이터 형식은 아래와 같다.
 
