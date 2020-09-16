@@ -50,7 +50,7 @@ console.log( c ) // var c 가 hoisting되서 zxcv 로 출력
 {% endhighlight %}
 
 
-## 2. 	2. let, const ( block-scoped )
+## 2. let, const ( block-scoped )
 
 : let, const 는 변수 재선언이 불가능
 : let은 변수 재할당이 가능, const는 변수 재할당도 불가능 
