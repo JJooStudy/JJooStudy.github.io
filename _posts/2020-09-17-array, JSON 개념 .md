@@ -3,6 +3,7 @@ layout: post
 title:  "array, JSON 개념"
 author: "JJoo"
 comments: true
+tags: javascript
 ---
 
 * array : 값의 배열 [] 대괄호 사용 
