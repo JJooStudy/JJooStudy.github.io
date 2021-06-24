@@ -17,7 +17,7 @@ tags: javascript
 - 파싱하다가 스크립트가 걸리면 스크립트 호출 -> 작동까지 한 후 남은 html을 파싱하기 때문에 html이 뜨기까지 너무 오래 걸린다.
 
 
-```javascript 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
