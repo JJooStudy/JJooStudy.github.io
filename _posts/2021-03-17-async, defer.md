@@ -51,7 +51,7 @@ tags: javascript
 </html>
 {% endhighlight %}
 
-![body 끝에 script를 넣었을 때의 파싱 순서](JJooStudy.github.io/images/body_script.png "body 끝에 script를 넣었을 때의 파싱 순서")
+![body 끝에 script를 넣었을 때의 파싱 순서](/images/body_script.png "body 끝에 script를 넣었을 때의 파싱 순서")
 
 
 ### head에 넣고 script에 async를 넣는 방법
@@ -75,7 +75,7 @@ tags: javascript
 </html>
 {% endhighlight %}
 
-![head에 넣고 script에 async를 넣었을 때의 파싱 순서](JJooStudy.github.io/images/head_async_script.png "head에 넣고 script에 async를 넣었을 때의 파싱 순서")
+![head에 넣고 script에 async를 넣었을 때의 파싱 순서](/images/head_async_script.png "head에 넣고 script에 async를 넣었을 때의 파싱 순서")
 
 
 ### head에 넣고 script에 defer를 넣는 방법
@@ -97,7 +97,7 @@ tags: javascript
 </html>
 {% endhighlight %}
 
-![head에 넣고 script에 defer를 넣었을 때의 파싱 순서](JJooStudy.github.io/images/head_defer_script.png "head에 넣고 script에 defer를 넣었을 때의 파싱 순서")
+![head에 넣고 script에 defer를 넣었을 때의 파싱 순서](/images/head_defer_script.png "head에 넣고 script에 defer를 넣었을 때의 파싱 순서")
 
 
 ### head의 여러 스크립트를 async로 불러올 경우 
@@ -122,7 +122,7 @@ tags: javascript
 </html>
 {% endhighlight %}
 
-![head의 여러 스크립트를 async로 불러올 경우의 파싱 순서](JJooStudy.github.io/images/head_async_multi_script.png "head의 여러 스크립트를 async로 불러올 경우의 파싱 순서")
+![head의 여러 스크립트를 async로 불러올 경우의 파싱 순서](/images/head_async_multi_script.png "head의 여러 스크립트를 async로 불러올 경우의 파싱 순서")
 
 
 ### head의 여러 스크립트를 defer로 불러올 경우 
@@ -146,6 +146,6 @@ tags: javascript
 </html>
 {% endhighlight %}
 
-![head의 여러 스크립트를 defer로 불러올 경우의 파싱 순서](JJooStudy.github.io/images/head_defer_multi_script.png "head의 여러 스크립트를 defer로 불러올 경우의 파싱 순서")
+![head의 여러 스크립트를 defer로 불러올 경우의 파싱 순서](/images/head_defer_multi_script.png "head의 여러 스크립트를 defer로 불러올 경우의 파싱 순서")
 
 
