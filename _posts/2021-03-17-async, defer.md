@@ -29,7 +29,7 @@ tags: javascript
 </html>
 {% endhighlight %}
 
-![head에 script를 넣었을 때의 파싱 순서](JJooStudy.github.io/images/head_script.png "head에 script를 넣었을 때의 파싱 순서")
+![head에 script를 넣었을 때의 파싱 순서](/images/head_script.png "head에 script를 넣었을 때의 파싱 순서")
 
 
 ### body 끝에 script를 넣는 방법
