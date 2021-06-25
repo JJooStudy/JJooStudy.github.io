@@ -21,7 +21,7 @@ Arguments를 통해서 사용자가 전달한 인자들에 접근할 수 있는 
 * 매개변수와 인자는 같은 의미로도 사용되긴 하지만 엄격히 따지면 다르다.
 
 
-{% highlight javascript %}
+```javascript
 function sum(){
     var i, _sum = 0;    
     for(i = 0; i < arguments.length; i++){
@@ -31,14 +31,17 @@ function sum(){
     return _sum;
 }
 document.write('result : ' + sum(1,2,3,4));
-{% endhighlight %}
+```
 
-> function sum() 에서 ()안에 들어가는 게 매개변수 parameter,
 
-> sum(1,2,3,4) 에서 ()안에서 함수로 전달되는 값을 인자 arguments.
+function `sum()` 에서 `()`안에 들어가는 게 매개변수 parameter,
+
+`sum(1,2,3,4)` 에서 `()`안에서 함수로 전달되는 값을 인자 arguments.
+
 
 
 ## 매개변수의 수 
+
 
 매개변수와 관련된 두가지 수가 있다.
 
@@ -46,26 +49,29 @@ document.write('result : ' + sum(1,2,3,4));
 - arguments.length : 함수로 전달된 실제 인자의 수를 의미
 
 
-{% highlight javascript %}
+```javascript
 function zero(){
     console.log(
         'zero.length', zero.length,
         'arguments', arguments.length
     );
 }
+
 function one(arg1){
     console.log(
         'one.length', one.length,
         'arguments', arguments.length
     );
 }
+
 function two(arg1, arg2){
     console.log(
         'two.length', two.length,
         'arguments', arguments.length
     );
 }
+
 zero(); // zero.length 0 arguments 0 
 one('val1', 'val2');  // one.length 1 arguments 2 
 two('val1');  // two.length 2 arguments 1
-{% endhighlight %}
+```
