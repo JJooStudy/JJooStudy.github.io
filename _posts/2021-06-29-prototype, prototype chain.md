@@ -82,7 +82,7 @@ console.log(redAppleOne.fruitProp);
 4. 없다면 Fruit.prototype에서 찾는다.
 
 
-이렇게 연결된 가까운 객체 순으로 찾아간다.
+이렇게 연결된 가까운 부모 순으로 찾아간다.
 
 
 
