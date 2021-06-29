@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "상속의 개념"
+title:  "prototype"
 author: "JJoo"
 comments: true
 tags: Javascript
