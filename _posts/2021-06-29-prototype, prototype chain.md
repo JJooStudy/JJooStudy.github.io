@@ -85,6 +85,8 @@ console.log(redAppleOne.fruitProp);
 이렇게 연결된 가까운 부모 순으로 찾아간다.
 
 
+![prototype chain 구조](/images/ex_prototype_chain.png "prototype chain 구조")
+
 
 ### 주의할 점
 
