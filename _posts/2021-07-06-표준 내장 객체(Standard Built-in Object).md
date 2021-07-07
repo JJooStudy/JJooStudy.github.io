@@ -17,14 +17,23 @@ tags: Javascript
 #### 자바스크립트의 내장객체
 
 • Object
+
 • Function
+
 • Array
+
 • String
+
 • Boolean
+
 • Number
+
 • Math
+
 • Date
+
 • RegExp
+
 
 자바스크립트라는 언어 자체(코어)가 제공하는 내장 객체는 저 9가지 항목이 전부이지만 호스트환경이 제공하는 api는 훨씬 많다.  
 
