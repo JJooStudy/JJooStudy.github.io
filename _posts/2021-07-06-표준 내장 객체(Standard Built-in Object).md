@@ -57,12 +57,14 @@ tags: Javascript
 과제 : `('seoul','new york','ladarkh','pusan', 'Tsukuba')` 중 하나를 랜덤하게 뽑는 기능이 필요함.
 
 
-```javacsript
+```javascript
 var arr = new Array('seoul','new york','ladarkh','pusan', 'Tsukuba');
+
 function getRandomValueFromArray(haystack){
-var index = Math.floor(haystack.length*Math.random());
-return haystack[index]; 
+  var index = Math.floor(haystack.length*Math.random());
+  return haystack[index]; 
 }
+
 console.log(getRandomValueFromArray(arr));
 ```
 
@@ -85,7 +87,7 @@ console.log(getRandomValueFromArray(arr));
 과제 : 위 코드에서 `Array`라는 생성자를 확장해서 모든 배열이 그 배열이 가지고 있는 특정한 값을 랜덤하게 뽑을 수 있는 코드로 수정 
 
 
-```javacsript
+```javascript
 /*
 기존코드 
 
