@@ -69,3 +69,32 @@ console.log(a.toString());
 
 `object.~` - > 하위객체는 사용불가능
 
+
+
+## object의 확장 
+
+
+ex)
+```javascript
+Object.prototype.contain = function(neddle) {
+    for(var name in this){
+        if(this[name] === neddle){
+            return true;
+        }
+    }
+    return false;
+}
+
+var o = {'name':'laura', 'city':'seoul'}
+
+console.log(o.contain('laura')); 
+
+var a = ['laura','jessie','lia'];
+console.log(a.contain('jessie'));
+```
+
+
+`.contain()` : `o`에 `laura`가 포함되어 있는 지 검사해서 `true`/`false` 값을 결과로 보여줌 
+
+
+
