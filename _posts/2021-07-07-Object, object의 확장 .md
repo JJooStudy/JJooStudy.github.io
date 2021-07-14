@@ -98,3 +98,52 @@ console.log(a.contain('jessie'));
 
 
 
+## object 확장의 위험
+
+object 확장의 장점은 모든 객체에 영향을 주는 것이다.
+
+object 확장의 위험도 역시 모든 객체에 영향을 주기 때문에 위험하다.
+
+
+```javascript
+Object.prototype.contain = function(neddle) {
+    for(var name in this){
+        if(this[name] === neddle){
+            return true;
+        }
+    }
+    return false;
+}
+var o = {'name':'egoing', 'city':'seoul'}
+for(var name in o){
+	console.log(name);
+}
+// 결과 name, city, contain
+
+var a = ['egoing','leezche','grapittie'];
+for(var name in a){
+	console.log(name);
+}
+// 결과 0,1,2,contain
+```
+
+
+대상이 되는 객체만이 아닌 `prototype`으로 정의했던 `contain`까지 포함되서 나온다.
+
+
+이를 해결하고 사용할 방법이 있다. 
+
+```javascript
+for(var name in a){
+	if(a.hasOwnProperty(name)){
+		console.log(name);
+	}
+}
+// 결과 0,1,2
+```
+
+
+- `.hasOwnProperty(프로퍼티 이름)` : `object`가 가지고 있는 메소드로 인자로 들어간 프로퍼티 이름을 어떠한 객체가 가지고 있는지 체크함. 결과는 `true`, `false`로 나옴 
+- `a.hasOwnProperty(name)` : `name`이 `a`의 `property`로 들어가 있는 지 체크해서 `true`, `false`로 결과값을 반환 
+- `hasOwnProperty`을 이용하여 객체에 직접적으로 정의되어 있는 지, 상속을 받은 건지 걸러낼 수 있음.
+
