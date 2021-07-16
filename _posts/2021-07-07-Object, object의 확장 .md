@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "표준 내장 객체(Standard Built-in Object)"
+title:  "Object, object의 확장"
 author: "JJoo"
 comments: true
 tags: Javascript
