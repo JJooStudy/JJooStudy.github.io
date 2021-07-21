@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "BOM(Browser Object Model)-2"
+title:  "BOM(Browser Object Model)-2: Location객체"
 author: "JJoo"
 comments: true
 tags: Javascript
