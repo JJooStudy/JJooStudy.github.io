@@ -21,7 +21,7 @@ BOM은 전역객체인 Window의 프로퍼티와 메소드들을 통해서 제�
 
 DOM(Document Object Model) 으로 통합해서 칭하기도 함
 
-![Object Model]('/images/img_browser_object_model.png' Object Model)
+![Object Model](/images/img_browser_object_model.png "Object Model")
 
 
 
@@ -95,7 +95,7 @@ HTML은 `form`을 통해서 사용자와 커뮤니케이션할 수 있는 기능
 
 경고창이 실행되어 있는 동안은 다음 스크립트가 실행되지 않는다.
 
-![alert]('img_window_alert.png' alert)
+![alert](/images/img_window_alert.png "alert")
 
 
 #### confirm
@@ -104,7 +104,7 @@ HTML은 `form`을 통해서 사용자와 커뮤니케이션할 수 있는 기능
 
 경고창이랑은 다르게 확인과 취소 버튼이 있다. 
 
-![confirm]('img_window_confirm.png' confirm)
+![confirm](/images/img_window_confirm.png "confirm")
 
 확인버튼을 누르면 `true`, 취소를 누르면 `false`를 반환한다. 
 
@@ -135,7 +135,7 @@ HTML은 `form`을 통해서 사용자와 커뮤니케이션할 수 있는 기능
 
 사용자가 입력한 값을 받아서 자바스크립트가 얻을 수 있는 기능 
 
-![prompt]('img_window_prompt.png' prompt)
+![prompt](/images/img_window_prompt.png "prompt")
 
 ```javascript
 prompt('id?');
