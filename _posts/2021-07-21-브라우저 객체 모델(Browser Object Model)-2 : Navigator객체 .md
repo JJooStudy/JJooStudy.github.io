@@ -50,7 +50,7 @@ console.log(location.protocol, location.host, location.port, location.pathname, 
 
 `location.hash` : #뒤에 오는 정보 출력 
 
-![Location 객체]('/img_BOM_location.png' Location 객체)
+![Location 객체](/images/img_BOM_location.png "Location 객체")
 
 
 
