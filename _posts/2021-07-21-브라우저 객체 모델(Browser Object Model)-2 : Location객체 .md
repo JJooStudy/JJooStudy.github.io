@@ -44,9 +44,9 @@ console.log(location.protocol, location.host, location.port, location.pathname, 
 
 `location.port` : undefined(80), 8080, 8081 … 
 
-`location.pathname` : host 뒤에 붙는 구체적인 정보 ex) /course/javascript
+`location.pathname` : host 뒤에 붙는 구체적인 정보, 디렉토리 경로 ex) /course/javascript
 
-`location.search` : ?뒤에 따라오는 정보들 표출 
+`location.search` : ?뒤에 따라오는 정보들, 요청 매개변수
 
 `location.hash` : #뒤에 오는 정보 출력 
 
