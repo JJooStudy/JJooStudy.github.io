@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "BOM(Browser Object Model)-2: Navigator객체"
+title:  "BOM(Browser Object Model)-3: Navigator객체"
 author: "JJoo"
 comments: true
 tags: Javascript
