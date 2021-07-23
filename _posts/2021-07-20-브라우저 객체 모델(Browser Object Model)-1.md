@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "BOM(Browser Object Model)"
+title:  "BOM(Browser Object Model)-1"
 author: "JJoo"
 comments: true
 tags: Javascript
