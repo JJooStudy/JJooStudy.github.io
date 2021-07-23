@@ -33,7 +33,7 @@ Window 객체는 식별자 `window`를 통해서 얻을 수 있다. 또한 생�
 
 Window 객체의 메소드인 `alert`을 호출하는 방법과 전역변수 `a`에 접근하는 방법은 아래와 같다
 
-```javascript
+```
 <!DOCTYPE html>
 <html>
   <script>
@@ -60,7 +60,7 @@ Window 객체의 메소드인 `alert`을 호출하는 방법과 전역변수 `a`
 객체를 만든다는 것은 결국 window 객체의 프로퍼티를 만드는 것과 같다.
 
 
-```javascript
+```
 <!DOCTYPE html>
 <html>
   <script>
@@ -111,7 +111,7 @@ HTML은 `form`을 통해서 사용자와 커뮤니케이션할 수 있는 기능
 사용자의 응답에 따른 분기처리를 할 수 있다.  
 
 
-```javascript
+```
 <!DOCTYPE html>
 <html>
   <body>
@@ -143,7 +143,7 @@ prompt('id?');
 
 텍스트 필드에 입력한 값을 반환하여 보여준다. 
 
-```javascript
+```
 <!DOCTYPE html>
 <html>
   <body>
