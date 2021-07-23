@@ -33,7 +33,7 @@ Window 객체는 식별자 `window`를 통해서 얻을 수 있다. 또한 생�
 
 Window 객체의 메소드인 `alert`을 호출하는 방법과 전역변수 `a`에 접근하는 방법은 아래와 같다
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <script>
