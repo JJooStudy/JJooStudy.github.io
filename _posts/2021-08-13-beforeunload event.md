@@ -54,3 +54,6 @@ react의 원리가 virtual DOM을 이용하기 때문이라고 추측됩니다.
 react와 virtual DOM에 대해 이해하기 좋은 영상
 
 [react와 virtual DOM](https://www.youtube.com/watch?v=BYbgopx44vo)
+
+
+[react에서의 beforeunload event 보러가기](https://jjoostudy.github.io/2021-08-17/react%EC%97%90%EC%84%9C%EC%9D%98-beforeunload-event)
