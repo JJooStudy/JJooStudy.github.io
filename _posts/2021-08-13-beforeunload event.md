@@ -51,7 +51,7 @@ window.onbeforeunload = function() {
 react의 원리가 virtual DOM을 이용하기 때문이라고 추측됩니다. 
 
 
-react와 virtual DOM에 대해 이해하기 좋은 영상
+## react와 virtual DOM에 대해 이해하기 좋은 영상
 
 [react와 virtual DOM](https://www.youtube.com/watch?v=BYbgopx44vo)
 
