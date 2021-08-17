@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "beforeunload event"
+title:  "react에서의 beforeunload event"
 author: "JJoo"
 comments: true
 tags: react
