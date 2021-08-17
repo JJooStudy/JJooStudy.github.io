@@ -36,7 +36,7 @@ npm i react-use
 
 ## 사용방법 
 
-```react
+```javascript
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useBeforeUnload } from "react-use";
