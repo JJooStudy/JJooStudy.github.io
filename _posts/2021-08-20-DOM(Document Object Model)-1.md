@@ -24,7 +24,7 @@ document객체의 메소드를 이용하여 문서내에서 객체를 찾는다.
 getElementsByTagName은 인자로 전달된 **태그명**에 해당하는 **객체들**(복수)을 찾아서 그 리스트를 NodeList라는 유사 배열에 담아서 반환한다. 
 NodeList는 배열은 아니지만 length와 배열접근연산자를 사용해서 엘리먼트를 조회할 수 있다.
 
-```javascript
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -46,7 +46,7 @@ NodeList는 배열은 아니지만 length와 배열접근연산자를 사용해�
 만약 조회의 대상을 좁히려면 아래와 같이 특정 객체를 지정하면 된다. 이러한 원칙은 다른 메소드에도 적용된다.
 
 
-```javascript
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -78,7 +78,7 @@ NodeList는 배열은 아니지만 length와 배열접근연산자를 사용해�
 이것도 유사배열에 담아서 반환한다.
 
 
-```javascript
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -104,7 +104,7 @@ NodeList는 배열은 아니지만 length와 배열접근연산자를 사용해�
 성능면에서 가장 우수하다.
 
 
-```javascript
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -127,7 +127,7 @@ NodeList는 배열은 아니지만 length와 배열접근연산자를 사용해�
 **css 선택자**의 문법을 이용해서 객체를 조회할수도 있다. 편리한 메소드이다.
 querySelector는 해당되고 제일 먼저 찾게 되는 **하나만** 반환한다.
 
-```javascript
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -158,7 +158,7 @@ querySelector는 해당되고 제일 먼저 찾게 되는 **하나만** 반환�
 querySelector과 기본적인 동작방법은 같지만 **모든 객체**를 조회한다는 점이 다르다.
 **복수로** 반환한다.
 
-```javascript
+```html
 <!DOCTYPE html>
 <html>
 <body>
