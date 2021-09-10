@@ -95,7 +95,7 @@ interface HTMLLIElement : HTMLElement {
 ```
 
 
-#### HTMLAnchroElement
+#### HTMLAnchrElement
 
 [https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-48250443](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-48250443)
 
