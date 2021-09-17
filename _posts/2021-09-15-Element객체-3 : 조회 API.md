@@ -1,0 +1,53 @@
+---
+layout: post
+title:  "Element객체-3 : 조회 API"
+author: "JJoo"
+comments: true
+tags: javescript
+---
+
+
+## 조회 API
+
+이전에는 ```document.getElementBy*```로 조회하는 것을 배웠었는데 여기서 ```document```는 문서의 전체를 의미한다.
+
+Element 객체 역시 ```getElementBy*``` 메소드를 가지고 있는데 Element 객체의 조회 메소드는 해당 엘리먼트의 하위 엘리먼트를 대상으로 조회를 수행한다. 
+
+```html
+<ul>
+	<li class="marked">html</li>
+	<li>css</li>
+	<li id="active">JavaScript
+		<ul>
+			<li>JavaScript Core</li>
+			<li class="marked">DOM</li>
+			<li class="marked">BOM</li>
+		</ul>
+	</li>
+</ul>
+<script>
+	var list = document.getElementsByClassName('marked');
+	console.group('document');
+	for(var i=0; i<list.length; i++){
+		console.log(list[i].textContent);
+	}
+	console.groupEnd();
+	console.group('active');
+	var active = document.getElementById('active'); 
+	var list = active.getElementsByClassName('marked');
+	for(var i=0; i<list.length; i++){
+		console.log(list[i].textContent);
+	}
+	console.groupEnd();
+</script>
+```
+
+결과 
+
+![조회 API 콘솔 결과](/images/img_Element_getAPI.png)
+
+
+```document.getElementById('active')``` : 문서 전체의 ```active class```를 가진 엘리먼트가 조회
+
+```active.getElementsByClassName('marked');``` : ```active``` 엘리먼트 하위 중 ```marked class```를 가진 엘리먼트가 조회 
+
