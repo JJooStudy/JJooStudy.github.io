@@ -3,7 +3,7 @@ layout: post
 title:  "Node 객체-2 : Node 관계 API"
 author: "JJoo"
 comments: true
-tags: javescript
+tags: Javascript
 ---
 
 
