@@ -3,7 +3,7 @@ layout: post
 title:  "Element객체-4 : 속성 API"
 author: "JJoo"
 comments: true
-tags: javescript
+tags: Javascript
 ---
 
 
