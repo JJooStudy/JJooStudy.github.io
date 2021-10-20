@@ -3,7 +3,7 @@ layout: post
 title:  "Element객체-2 : 식별자 API"
 author: "JJoo"
 comments: true
-tags: javescript
+tags: Javascript
 ---
 
 
