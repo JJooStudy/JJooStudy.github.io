@@ -163,6 +163,8 @@ hook에서 hook으로 정보 전달이 가능하다.
 
  use'CustomHook'을 직접적으로 호출하면 React의 관점에서 이 컴포넌트는 ```useState```와 ```useEffect```를 호출한 것과 다름없고, 하나의 컴포넌트 안에서 ```useState```와 ```useEffect```를 여러 번 부를 수 있기에 이들은 모두 완전히 독립적입니다.
 
+[custom Hook 만들기](https://jjoostudy.github.io/2021-10-20/react-custom-Hook)
+
 
 ## 추가 hooks 
 
@@ -253,9 +255,9 @@ export default function HooksReducer() {
 
 - Hooks는 class component의 단점을 보완하고 재사용성을 강화한다.
 - Hook은 functional component와 custom hook에서만 사용해야 하고 최상위에 위치해야 한다.
-- useEffect는 데이터 fetch, 구독 설정하기, 수동으로 DOM을 수정하는 등 side effect(부수효과)를 수행한다.
-- useEffect의 clean up은 구독과 구독해지(이전의 side effect를 지우고 다시 선언)를 한공간에서 처리해준다.
-- useEffect의 dependency array는 필요한 변경시에만 effect가 실행되게 한다.
+- ```useEffect```는 데이터 fetch, 구독 설정하기, 수동으로 DOM을 수정하는 등 side effect(부수효과)를 수행한다.
+- ```useEffect```의 clean up은 구독과 구독해지(이전의 side effect를 지우고 다시 선언)를 한공간에서 처리해준다.
+- ```useEffect```의 dependency array는 필요한 변경시에만 effect가 실행되게 한다.
 - 반복되는 hooks를 공통으로 묶어서 관리하는 것을 custom hook이라고 한다.
 
 
