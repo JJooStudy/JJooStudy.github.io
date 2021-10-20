@@ -3,7 +3,7 @@ layout: post
 title:  "Element객체-3 : 조회 API"
 author: "JJoo"
 comments: true
-tags: javescript
+tags: Javascript
 ---
 
 
