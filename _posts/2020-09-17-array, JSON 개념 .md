@@ -3,7 +3,7 @@ layout: post
 title:  "array, JSON 개념"
 author: "JJoo"
 comments: true
-tags: javascript
+tags: Javascript
 ---
 
 
