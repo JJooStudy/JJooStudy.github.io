@@ -3,7 +3,7 @@ layout: post
 title:  "Arguments"
 author: "JJoo"
 comments: true
-tags: javascript
+tags: Javascript
 ---
 
 
