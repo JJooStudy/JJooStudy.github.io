@@ -3,7 +3,7 @@ layout: post
 title:  "var, let, const 차이"
 author: "JJoo"
 comments: true
-tags: javascript
+tags: Javascript
 ---
 
 Var  : function-scoped
