@@ -3,7 +3,7 @@ layout: post
 title:  "DOM(Document Object Model)-3 HTMLCollection"
 author: "JJoo"
 comments: true
-tags: javescript
+tags: Javascript
 ---
 
 
