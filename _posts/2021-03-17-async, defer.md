@@ -3,7 +3,7 @@ layout: post
 title:  "async, defer"
 author: "JJoo"
 comments: true
-tags: javascript
+tags: Javascript
 ---
 
 
