@@ -37,7 +37,7 @@ function handleClick() {
 useEffect는 dependency array가 없든, 있든 선언한 순서대로 작동한다.
 
 
-```javascript
+```react
 import "./styles.css";
 import React, { useEffect, useState } from "react";
 
