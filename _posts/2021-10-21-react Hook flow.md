@@ -144,7 +144,7 @@ useEffect(() => {
 
 clean up 예시 
 
-```javascript
+```react
 import "./styles.css";
 import React, { useEffect, useState } from "react";
 
