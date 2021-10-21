@@ -110,6 +110,9 @@ useEffect(() => {
 });
 ```
 
+[Clean UP 작동 순서](https://jjoostudy.github.io/2021-10-21/react-Hook-flow#useeffect%EC%9D%98-clean-up)
+
+
 
 ## Effect가 업데이트 시마다 실행되는 이유
 
@@ -130,6 +133,8 @@ componentDidUpdate(prevProps, prevState){
   ...
 }
 ```
+
+[react hook의 호출 순서](https://jjoostudy.github.io/2021-10-21/react-Hook-flow)
 
 
 ## Custom Hooks 
