@@ -231,15 +231,15 @@ react의 component는 생성 -> 업데이트 -> 제거 순의 생명주기를 �
 
 컴포넌트를 새로 만들 때마다 호출되는 클래스 생성자 메소드
 
-this.state의 초기값 적용, 이벤트 처리 메서드를 바인딩하기 위해 사용.
+```this.state```의 초기값 적용, 이벤트 처리 메서드를 바인딩하기 위해 사용.
 
 해당 컴포넌트가 마운트되기 전에 호출해야한다. 
 
-this.props가 생성자 내에서 정의되도록 super(props)를 꼭 호출해야 한다. 
+```this.props```가 생성자 내에서 정의되도록 ```super(props)```를 꼭 호출해야 한다. 
 
-state값을 변경하고 싶다면 constructor 외부에서 this.setState()로 변경해야지 내부에서 this.setState()를 호출하면 안된다. 
+```state```값을 변경하고 싶다면 ```constructor``` 외부에서 ```this.setState()```로 변경해야지 내부에서 ```this.setState()```를 호출하면 안된다. 
 
-state를 초기화하거나 메소드를 바인딩하는 작업이 없다면 constructor는 없어도 된다. 
+```state```를 초기화하거나 메소드를 바인딩하는 작업이 없다면 ```constructor```는 없어도 된다. 
 
 
 
@@ -249,9 +249,30 @@ state를 초기화하거나 메소드를 바인딩하는 작업이 없다면 con
 
 외부에서 데이터를 불러와서 넣어줘야 할때 네트워트 요청을 보내기 좋은 위치이다. 
 
-componentDidMount에서 setState를 호출하는 경우 render()가 두번 호출된다. 
+```componentDidMount```에서 ```setState```를 호출하는 경우 ```render()```가 두번 호출된다. 
 
 
+#### componentDidUpdate()
+
+최초 렌더링에서는 호출되지 않고 업데이트, 리렌더링 직후  호출된다. 
+
+리렌더링 되는 경우는 다음과 같다.
+
+- ```props```가 바뀔 때
+- ```state```가 바뀔 때
+- 부모 컴포넌트가 리렌더링 될때 
+- 강제로 트리거를 발생시킬때(```this.forceUpdate```)
+
+```componentDidUpdate()```에서 ```setState```를 사용하면 무한 렌더링이 발생될 수 있으니 주의해야 한다.
+
+
+#### componentWillUnmount()
+
+컴포넌트가 마운트가 해제되어 제거되기 직전에 호출된다.
+
+타이머 제거, 네트워크 요청 취소, ```componentDidMount()```에서 생성된 작업 등을 정리할 때 사용된다.
+
+실행 직후 컴포넌트는 렌더링 되지 않으므로 ```setState()```를 호출하면 안된다.
 
 
 
