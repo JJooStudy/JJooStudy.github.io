@@ -37,7 +37,7 @@ useState, useEffect를 사용하여 상태관리를 한다.
 
 [https://ko.reactjs.org/docs/hooks-state.html](https://ko.reactjs.org/docs/hooks-state.html)
 
-```javascript
+```react
 importReact,{ useState } from 'react';
 
 function Example(){ 
@@ -208,7 +208,7 @@ hook api 참고서
 #### useReducer 사용 예시 
 
 
-```javascript
+```react
 import React, { useReducer } from "react";
 
 export default function HooksReducer() {
