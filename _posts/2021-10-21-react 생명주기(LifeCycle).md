@@ -139,12 +139,12 @@ export default class LifeCycle extends Component {
 }
 ```
 
-class component에서 내장함수가 아닌 새로 만든 custom 함수에서 바로 this.state로 접근할 수 없다.
+class component에서 내장함수가 아닌 새로 만든 custom 함수에서 바로 ```this.state```로 접근할 수 없다.
 
-custom 함수에서 this.state에 관여하고 싶을 때는
+custom 함수에서 ```this.state```에 관여하고 싶을 때는
 
-	1. ```constructor```에서 바인드 시켜주거나 
-	2. 함수를 화살표 함수 arrow function으로 만들어준다.
+1. ```constructor```에서 바인드 시켜주거나 
+2. 함수를 화살표 함수 arrow function으로 만들어준다.
 
 arrow function은 바깥과의 ```constructor```를 공유하기 때문에 ```this```를 알고 있다. 
 
