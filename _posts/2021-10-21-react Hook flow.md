@@ -14,7 +14,7 @@ react에서 setState는 이전값(prev)를 가져온다. setState가 알아서 �
 이때 useState에 변수말고 함수로 넣어주게 되면 조금 딜레이가 생겨서 로컬스토리지에서 꺼내거나, 작동까지 시간이 조금 필요할 때 활용할 수 있다. 
 
 
-``javascript 
+```javascript 
 const [show, setShow] = React.useState(false);
 function handleClick() {
   setShow((prev) => !prev);
