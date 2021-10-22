@@ -249,17 +249,32 @@ react의 component는 생성 -> 업데이트 -> 제거 순의 생명주기를 �
 
 #### getDerivedStateFromProps()
 
-props값을 state와 동기화하고 싶을 때 만든다.
+props값을 state와 동기화하고 싶을 때 만든다. v16.3 이후에 만들어졌다. 
 
 
 #### shouldComponentUpdate()
 
 component가 업데이트를 할지, 말지 정하는 것. ```false``` or ```true```
 
+컴포넌트를 최적화하는 작업에서 매우 유용하게 사용된다. 
+
+현재 컴포넌트의 상태가 업데이트되지 않아도 부모 컴포넌트가 리렌더링되면 자식 컴포넌트들도 리렌더링 되는 데 이때 데이터 변화가 없으면 DOM은 조작하지 않고 Virtual DOM에만 리렌더링을 한다. 
+
+이 불필요하게 Virtual DOM에 리렌더링하는 것을 방지하기 위해 사용하고 기본적으로 true를 반환하고 필요에 따라 false를 반환하면 해당 조건에서는 render()를 호출하지 않는다.
+
 
 #### getSnapshotBeforeUpdate()
 
 실제로 브라우저에 반영되기 직전의 값을 확인할 수 있는 것.
+
+- render()
+- getSnampshotBeforeUpdate()
+- 실제 DOM에 변화 발생
+- componentDidUpdate
+
+이 4가지 시점에서 발생한다. 
+
+DOM 변화가 일어나기 직전의 DOM 상태를 가져오고, 여기서 리턴하는 값은 ```componentDidUpdate```에서 **3번째 파라미터**로 받아올 수 있게 된다.
 
 
 #### componentDidMount()
@@ -293,5 +308,23 @@ component가 업데이트를 할지, 말지 정하는 것. ```false``` or ```tru
 
 실행 직후 컴포넌트는 렌더링 되지 않으므로 ```setState()```를 호출하면 안된다.
 
+
+#### componentDidCatch
+
+render()에서 에러 발생시 유용하게 사용할 수 있다.
+
+```
+componentDidCatch(error, info) {
+  this.setState({
+    error: true
+  });
+}
+```
+
+state.error 를 true 로 설정하게 하고, render 함수쪽에서 이에 따라 에러를 띄워준다.
+
+**주의**  
+
+컴포넌트 자신의 render()에서 에러가 발생하는 것은 잡아낼 수 없지만, 컴포넌트의 자식 컴포넌트 내부에서 발생하는 에러들을 잡아낼 수 있다. 
 
 
