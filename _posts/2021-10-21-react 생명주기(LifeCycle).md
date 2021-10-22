@@ -93,9 +93,6 @@ hook이 나오면서 함수형 컴포넌트에서 상태관리를 할 수 있게
 state를 직접 변경하는 값을 넣게 되면 리렌더링이 일어나지 않는다.
 
 
-![react lifecycle methods diagram](/images/img_react_lifecicle_1.png)
-
-
 
 ## class component lifecycle 살펴보기 
 
@@ -222,6 +219,14 @@ export default class LifeCycle extends Component {
 ```
 
 
+#### react 생명주기 다이어그램 
+
+![react lifecycle methods diagram](/images/img_react_lifecicle_1.png)
+
+[https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
+
+
 ## 생명주기 methods 좀더 알아보기
 
 react의 component는 생성 -> 업데이트 -> 제거 순의 생명주기를 가지고 있다. 
@@ -241,6 +246,20 @@ react의 component는 생성 -> 업데이트 -> 제거 순의 생명주기를 �
 
 ```state```를 초기화하거나 메소드를 바인딩하는 작업이 없다면 ```constructor```는 없어도 된다. 
 
+
+#### getDerivedStateFromProps()
+
+props값을 state와 동기화하고 싶을 때 만든다.
+
+
+#### shouldComponentUpdate()
+
+component가 업데이트를 할지, 말지 정하는 것. ```false``` or ```true```
+
+
+#### getSnapshotBeforeUpdate()
+
+실제로 브라우저에 반영되기 직전의 값을 확인할 수 있는 것.
 
 
 #### componentDidMount()
