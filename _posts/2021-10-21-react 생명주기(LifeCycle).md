@@ -51,7 +51,13 @@ export default class ClassComponent extends Component {
 }
 ```
 
-class component에서의 상태관리는 용도에 따라서 constructor, componentDidMount, componentDidUpdate, componentWillUnmount 등으로 관리한다. 
+class component에서의 상태관리는 용도에 따라서 
+- constructor
+- componentDidMount
+- componentDidUpdate 
+- componentWillUnmount
+- ...
+등으로 관리한다. 
 
 
 
@@ -140,7 +146,7 @@ class component에서 내장함수가 아닌 새로 만든 custom 함수에서 �
 
 custom 함수에서 ```this.state```에 관여하고 싶을 때는
 
-1. ```constructor```에서 바인드 시켜주거나 
+1. ```constructor```에서 바인드 시켜주거나 (```.bind(this);```)
 2. 함수를 화살표 함수 arrow function으로 만들어준다.
 
 arrow function은 바깥과의 ```constructor```를 공유하기 때문에 ```this```를 알고 있다. 
@@ -183,6 +189,7 @@ export default class LifeCycle extends Component {
 
 
 함수를 arrow function으로 만들어주는 예시 
+(```handleClick()```)
 
 ```react 
 import React, { Component } from "react";
@@ -240,7 +247,7 @@ react의 component는 생성 -> 업데이트 -> 제거 순의 생명주기를 �
 
 해당 컴포넌트가 마운트되기 전에 호출해야한다. 
 
-```this.props```가 생성자 내에서 정의되도록 ```super(props)```를 꼭 호출해야 한다. 
+```this.props```가 생성자 내에서 정의되도록 ```super(props)```를 **꼭 호출**해야 한다. 
 
 ```state```값을 변경하고 싶다면 ```constructor``` 외부에서 ```this.setState()```로 변경해야지 내부에서 ```this.setState()```를 호출하면 안된다. 
 
@@ -250,6 +257,23 @@ react의 component는 생성 -> 업데이트 -> 제거 순의 생명주기를 �
 #### getDerivedStateFromProps()
 
 props값을 state와 동기화하고 싶을 때 만든다. v16.3 이후에 만들어졌다. 
+
+다른 생명주기 메서드와는 달리 앞에 ```static``` 을 필요로 하고, 이 안에서는 ```this```를 조회 할 수 없다. 
+
+여기서 특정 객체를 리턴하게 되면 해당 객체 안에 있는 내용들이 ```state```로 설정이 된다. 
+
+컴포넌트가 처음 렌더링 되기 전에도 호출 되고, 리렌더링 되기 전에도 매번 실행된다.
+
+사용예시
+```
+static getDerivedStateFromProps(nextProps, prevState) {
+  console.log("getDerivedStateFromProps");
+  if (nextProps.name !== prevState.name) {
+    return { name: nextProps.name };
+  }
+  return null;
+}
+```
 
 
 #### shouldComponentUpdate()
@@ -276,6 +300,8 @@ component가 업데이트를 할지, 말지 정하는 것. ```false``` or ```tru
 
 DOM 변화가 일어나기 직전의 DOM 상태를 가져오고, 여기서 리턴하는 값은 ```componentDidUpdate```에서 **3번째 파라미터**로 받아올 수 있게 된다.
 
+(```componentDidUpdate(prevProps, prevState, snapshot)```)
+
 
 #### componentDidMount()
 
@@ -283,7 +309,9 @@ DOM 변화가 일어나기 직전의 DOM 상태를 가져오고, 여기서 리�
 
 외부에서 데이터를 불러와서 넣어줘야 할때 네트워트 요청을 보내기 좋은 위치이다. 
 
-```componentDidMount```에서 ```setState```를 호출하는 경우 ```render()```가 두번 호출된다. 
+```componentDidMount```에서 ```setState```를 호출하는 경우(ex) 외부 데이터 셋팅 등) ```render()```가 두번 호출된다. 
+
+최초 렌더링 직후 => setState로 인한 리렌더링 : 화면 갱신전에 일어나서 두번의 렌더링이 눈에 띄진 않지만 성능상의 문제로 이러질 수는 있다. 
 
 
 #### componentDidUpdate()
@@ -321,10 +349,9 @@ componentDidCatch(error, info) {
 }
 ```
 
-state.error 를 true 로 설정하게 하고, render 함수쪽에서 이에 따라 에러를 띄워준다.
+```state.error```를 ```true```로 설정하게 하고, render 함수쪽에서 이에 따라 에러를 띄워준다.
 
 **주의**  
 
-컴포넌트 자신의 render()에서 에러가 발생하는 것은 잡아낼 수 없지만, 컴포넌트의 자식 컴포넌트 내부에서 발생하는 에러들을 잡아낼 수 있다. 
-
+컴포넌트 자신의 ```render()```에서 에러가 발생하는 것은 잡아낼 수 없지만, 컴포넌트의 자식 컴포넌트 내부에서 발생하는 에러들을 잡아낼 수 있다. 
 
