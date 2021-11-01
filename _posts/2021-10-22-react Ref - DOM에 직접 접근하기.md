@@ -121,11 +121,11 @@ function CustomTextInput(props) {
 }
 ```
 
-```useRef()``` hook을 사용하여 ```inputRef``` 객체를 생성한 후, ```<input>``` 엘리먼트의 ref prop에 넘긴다. 
+```useRef()``` hook을 사용하여 ```inputRef``` 객체를 생성한 후, ```<input>```의 ref prop에 넘긴다. 
 
-이렇게 해주면 ```inputRef``` 객체의 ```current``` 속성에는 ```<input>``` 엘리먼트의 레퍼런스가 저장됩니다. 
+이렇게 해주면 ```inputRef``` 객체의 ```current``` 속성에는 ```<input>```의 레퍼런스가 저장됩니다. 
 
-따라서 ```<button>``` 엘리먼트의 click 이벤트 핸들러에서는 ```inputRef.current```로 ```<input>``` 엘리먼트를 제어할 수 있다.
+따라서 ```<button>``` 의 click 이벤트 핸들러에서는 ```inputRef.current```로 ```<input>```을 제어할 수 있다.
 
 
 
