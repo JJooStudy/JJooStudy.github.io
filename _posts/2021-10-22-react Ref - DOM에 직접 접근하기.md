@@ -10,7 +10,7 @@ tags: react
 
 Ref란 render 메소드에서 생성된 DOM노드나 React 앨리먼트에 접근하는 방법을 제공합니다.
 
-```props```로 변경하는 일반적인 데이터 플로우가 아닌 직접적으로 자식을 변경해야 하는 경우가 있는 데, 여기서 자식은 컴포넌트의 인스턴스일 수도 있고, DOM 엘리먼트일 수도 있다.
+```props```로 변경하는 일반적인 date flow가 아닌 직접적으로 자식을 변경해야 하는 경우가 있는 데, 여기서 자식은 컴포넌트의 인스턴스일 수도 있고, DOM 엘리먼트일 수도 있다.
 
 변경하고자 하는 자식에게 이름을 달아주는 것이 ref다.
 
@@ -49,7 +49,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-Ref는 ```React.createRef()```를 통해서 생성되고 ref 어트리뷰트를 통해 react 엘리먼트에 연결된다. 
+Ref는 ```React.createRef()```를 통해서 생성되고 ref 속성을 통해 react 엘리먼트에 연결된다. 
 
 보통 컴포넌트의 인스턴스가 생성될 때 ref를 프로퍼티로서 추가하고, 그럼으로서 컴포넌트의 인스턴스의 어느 곳에서도 ref에 접근할 수 있다. 
 
@@ -60,13 +60,13 @@ Ref는 ```React.createRef()```를 통해서 생성되고 ref 어트리뷰트를 
 const node = this.myRef.current;
 ```
 
-생성된 ref는 그 노드를 향한 참조를 ```current``` 어트리뷰트에 담는다. 
+생성된 ref는 그 노드를 향한 참조를 ```current``` 속성에 담는다. 
 
-ref 어트리뷰트가 HTML 엘리먼트에 쓰였다면, 생성자에서 ```React.createRef()```로 생성된 ref는 자신을 전달받은 DOM 엘리먼트를 ```current``` 프로퍼티의 값으로서 받는다.
+ref속성이 HTML 엘리먼트에 쓰였다면, 생성자에서 ```React.createRef()```로 생성된 ref는 자신을 전달받은 DOM 엘리먼트를 ```current``` 프로퍼티의 값으로서 받는다.
 
-ref 어트리뷰트가 custom class component에 쓰였다면, ref 객체는 마운트된 컴포넌트의 인스턴스를 ```current``` 프로퍼티의 값으로서 받습니다.
+ref속성이 custom class component에 쓰였다면, ref 객체는 마운트된 컴포넌트의 인스턴스를 ```current``` 프로퍼티의 값으로서 받습니다.
 
-functional component는 인스턴스가 없기때문에 함수컴포넌트에 ref 어트리뷰트를 사용할 수 없다. 
+functional component는 인스턴스가 없기때문에 함수컴포넌트에 ref속성을 사용할 수 없다. 
 
 
 예시
@@ -90,7 +90,7 @@ class Parent extends React.Component {
 
 ```
 
-하지만 DOM 엘리먼트나 class component의 인스턴스에 접근하기 위해 ref 어트리뷰트를 functional component에 사용하는 것은 된다. 
+하지만 DOM 엘리먼트나 class component의 인스턴스에 접근하기 위해 ref속성을 functional component에 사용하는 것은 된다. 
 
 
 ## functional component - useRef()
