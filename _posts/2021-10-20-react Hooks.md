@@ -43,18 +43,18 @@ importReact,{ useState } from 'react';
 function Example(){ 
 	const [count,setCount] = useState(0);
 	return(
-	<div> 
-	        <p>You clicked {count} times</p> 
-	        <buttononClick={()=>setCount(count +1)}>
-		         Click me
-	        </button>
-	      </div>
+		<div> 
+			<p>You clicked {count} times</p> 
+			<buttononClick={()=>setCount(count +1)}>
+				Click me
+			</button>
+		</div>
 	);
 }
 ```
 
-- ```importReact,{useState }from'react'; ```: useState Hook을 React에서 가져온다.
-- ```const [count, setCount] = useState(0);``` : useState Hook을 이용하면 state 변수와 해당 state를 갱신할 수 있는 함수가 만들어집니다. 또한, useState의 인자의 값으로 ```0```을 넘겨주면 ```count```값을 ```0```으로 초기화할 수 있습니다.
+- ```importReact,{useState }from'react'; ```: ```useState``` Hook을 React에서 가져온다.
+- ```const [count, setCount] = useState(0);``` : ```useState``` Hook을 이용하면 state 변수와 해당 state를 갱신할 수 있는 함수가 만들어진다. 또한, ```useState```의 인자의 값으로 ```0```을 넘겨주면 ```count```값을 ```0```으로 초기화할 수 있다.
 - ```<buttononClick={()=>setCount(count +1)}>``` : 사용자가 버튼 클릭을 하면 ```setCount``` 함수를 호출하여 state 변수를 갱신합니다. React는 새로운 ```count``` 변수를 ```Example``` 컴포넌트에 넘기며 해당 컴포넌트를 리렌더링합니다.
 
 
@@ -124,7 +124,7 @@ class component에서는 업데이트가 될때마다 계속 업데이트를 잡
 
 
 ex)
-```useEffect(()=>{},[dependency array]}```
+```useEffect(()=>{ ... },[dependency array]}```
 
 class component 에서는 ```componentDidUpdate```에서 값을 전달받아서 그 값이 이전값과 달라졌을 때 업데이트 되게 했음  
 
@@ -146,6 +146,8 @@ componentDidUpdate(prevProps, prevState){
 
 hook에서 hook으로 정보 전달이 가능하다. 
 
+
+custom hook의 규칙
 
 #### 본래의 예시와 작동 방식에 어떤 변화도 없이 정확히 같은 방식으로 작동한다. 
 
@@ -203,11 +205,7 @@ hook api 참고서
 
 **useReducer** : ```useState``` 대체 state / reducer / action
 
-
-
-#### useReducer 사용 예시 
-
-
+useReducer 사용 예시 
 ```react
 import React, { useReducer } from "react";
 
@@ -252,7 +250,7 @@ export default function HooksReducer() {
 
 **useCallback & useMemo** : 메모이제이션 
 
-**useRef** : current 라는 상자. 내용의 변경은 알려주지 않음. 콜백 ref 사용
+**useRef** : current 라는 상자를 사용. 내용의 변경은 알려주지 않음. 콜백 ref 사용
 
 
 
