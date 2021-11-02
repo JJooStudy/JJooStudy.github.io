@@ -33,6 +33,22 @@ export const GlobalStyle = createGlobalStyle`
 
 ```
 
+#### Ant Design의 컬러 셋팅하기 
+
+설치 
+
+`npm install @ant-design/colors`
+
+사용방법 
+
+`import {  } from '@ant-design/colors';`
+
+아래 문서 참고하여 원하는 컬러를 import 하면 된다. 
+
+[Ant Design color 공식문서](https://ant.design/docs/spec/colors#Neutral-Color-Palette)
+
+
+#### styled-component로 오버라이딩해서 커스텀하기 
 
 AntDesign으로 레이아웃부터 작은 컴포넌트까지 모두 활용해서 사용해보려고 셋팅을 하다보니 css 커스텀이 필요했다.
 
