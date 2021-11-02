@@ -60,6 +60,24 @@ export default function CompositionDialog(props) {
 
 #### custom component에 세부내용만 받아오는 방식
 
+WelcomeDialog.jsx (부모)
+```react
+import React from "react";
+import CompositionDialog from "./CompositionDialog";
+import CustomDialog from "./CustomDialog";
+export default function WelcomDialog() {
+  return (
+    <>
+      <CompositionDialog 
+        title="title"
+        description="description"
+      />
+      <CustomDialog title="Welcome" description="thank you" />
+    </>
+  );
+}
+```
+
 CustomDialog.jsx
 ```react
 import React from "react";
@@ -72,6 +90,8 @@ export default function CustomDialog(props) {
   );
 }
 ```
+
+
 
 ```props```로 세부 내용만 받아오고 컴포넌트의 구조(틀)은 모두 자식 컴포넌트에서 만들어서 리턴해주는 구조 
 
