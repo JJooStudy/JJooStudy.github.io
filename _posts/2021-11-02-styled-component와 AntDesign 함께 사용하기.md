@@ -20,7 +20,7 @@ tags: react, antDesign
 
 [styled-component 셋팅하기](https://jjoostudy.github.io/2021-10-29/Next.js%EC%97%90-styled-components-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)
 
-```
+```react
 import { createGlobalStyle } from 'styled-components';
 import { reset } from 'styled-reset';
 import 'antd/dist/antd.css';
@@ -40,7 +40,7 @@ AntDesign으로 레이아웃부터 작은 컴포넌트까지 모두 활용해서
 
 styled-component의 ```styled()``` 사용 
 
-```
+```react
 import React from 'react';
 // ant design
 import { Layout } from 'antd';
