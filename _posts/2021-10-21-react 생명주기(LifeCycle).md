@@ -100,7 +100,7 @@ state를 직접 변경하는 값을 넣게 되면 리렌더링이 일어나지 �
 
 
 
-## class component lifecycle 살펴보기 
+## class component lifecycle 메소드 살펴보기 
 
 ```react 
 import React, { Component } from "react";
