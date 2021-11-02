@@ -292,7 +292,7 @@ component가 업데이트를 할지, 말지 정하는 것. ```false``` or ```tru
 실제로 브라우저에 반영되기 직전의 값을 확인할 수 있는 것.
 
 - render()
-- getSnampshotBeforeUpdate()
+- getSnapshotBeforeUpdate()
 - 실제 DOM에 변화 발생
 - componentDidUpdate
 
@@ -323,7 +323,7 @@ DOM 변화가 일어나기 직전의 DOM 상태를 가져오고, 여기서 리�
 - ```props```가 바뀔 때
 - ```state```가 바뀔 때
 - 부모 컴포넌트가 리렌더링 될때 
-- 강제로 트리거를 발생시킬때(```this.forceUpdate```)
+- 강제로 트리거를 발생시킬때(```this.forceUpdate```: 무조건 리렌더링 시킴)
 
 ```componentDidUpdate()```에서 ```setState```를 사용하면 무한 렌더링이 발생될 수 있으니 주의해야 한다.
 
