@@ -18,8 +18,8 @@ hook에서 hook으로 정보 전달이 가능하다.
 
 ```javascript
 useEffect( () => {
-	window.localStorage.setItem("keyword", keyword);
-	window.localStorage.setItem("result", result);
+  window.localStorage.setItem("keyword", keyword);
+  window.localStorage.setItem("result", result);
 }, [ keyword, result ]);
 ```
 
@@ -29,11 +29,11 @@ useEffect( () => {
 
 ```javascript
 useEffect( () => {
-	window.localStorage.setItem("keyword", keyword);
+  window.localStorage.setItem("keyword", keyword);
 }, [ keyword ]);
 
 useEffect( () => {
-	window.localStorage.setItem("result", result);
+  window.localStorage.setItem("result", result);
 }, [ result ]);
 ```
 
@@ -45,19 +45,18 @@ custom hook은 꼭 **use로 시작해야** 특정 함수가 그안에서 hook을
 
 ```javascript
 function useLocalStorage( itemName ){
-	const [ state, setState ] = React.useState( () => {
-		return window.loacalStorage.getItem( itemName ) || "";
-	} )
-	useEffect( () => {
-		window.localStorage.setItem( itemName , state);
-	}, [ state ]);
-	
-	return [ state, setState ];
+  const [ state, setState ] = React.useState( () => {
+    return window.loacalStorage.getItem( itemName ) || "";
+  } )
+  useEffect( () => {
+    window.localStorage.setItem( itemName , state);
+  }, [ state ]);
+  return [ state, setState ];
 }
 
 const App = () => {
-	const [ keyword , setKeyword ] = useLocalStorage( "keyword" );
-	cosnt [ result , setResult ] = useLocalStorage( "result" )
+  const [ keyword , setKeyword ] = useLocalStorage( "keyword" );
+  cosnt [ result , setResult ] = useLocalStorage( "result" )
 }
 ```
 
@@ -66,20 +65,19 @@ default 값을 다른 타입으로 지정하고 싶다면
 
 ```javascript
 function useLocalStorage( itemName , value = "" ){
-	const [ state, setState ] = React.useState( () => {
-		return window.loacalStorage.getItem( itemName ) || value ;
-	} )
-	useEffect( () => {
-		window.localStorage.setItem( itemName , state);
-	}, [ state ]);
-	
-	return [ state, setState ];
+  const [ state, setState ] = React.useState( () => {
+    return window.loacalStorage.getItem( itemName ) || value ;
+  } )
+  useEffect( () => {
+    window.localStorage.setItem( itemName , state);
+  }, [ state ]);
+  return [ state, setState ];
 }
 
 const App = () => {
-	const [ keyword , setKeyword ] = useLocalStorage( "keyword" );
-	cosnt [ result , setResult ] = useLocalStorage( "result" );
-	cosnt [ typing , setTyping ] = useLocalStorage( "typing" , false );
+  const [ keyword , setKeyword ] = useLocalStorage( "keyword" );
+  cosnt [ result , setResult ] = useLocalStorage( "result" );
+  cosnt [ typing , setTyping ] = useLocalStorage( "typing" , false );
 }
 ```
 
