@@ -3,7 +3,7 @@ layout: post
 title:  "styled-component와 AntDesign 함께 사용하기"
 author: "JJoo"
 comments: true
-tags: react, antDesign
+tags: react antDesign
 ---
 
 
