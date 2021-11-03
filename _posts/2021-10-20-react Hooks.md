@@ -38,24 +38,24 @@ useState, useEffect를 사용하여 상태관리를 한다.
 [https://ko.reactjs.org/docs/hooks-state.html](https://ko.reactjs.org/docs/hooks-state.html)
 
 ```react
-importReact,{ useState } from 'react';
+import React, { useState } from 'react';
 
 function Example(){ 
-	const [count,setCount] = useState(0);
-	return(
-		<div> 
-			<p>You clicked {count} times</p> 
-			<buttononClick={()=>setCount(count +1)}>
-				Click me
-			</button>
-		</div>
-	);
+  const [count,setCount] = useState(0);
+  return(
+    <div> 
+      <p>You clicked {count} times</p> 
+      <button onClick={() => setCount(count +1)}>
+        Click me
+      </button>
+      </div>
+  );
 }
 ```
 
-- ```importReact,{useState }from'react'; ```: ```useState``` Hook을 React에서 가져온다.
+- ```import React, { useState } from 'react'; ```: ```useState``` Hook을 React에서 가져온다.
 - ```const [count, setCount] = useState(0);``` : ```useState``` Hook을 이용하면 state 변수와 해당 state를 갱신할 수 있는 함수가 만들어진다. 또한, ```useState```의 인자의 값으로 ```0```을 넘겨주면 ```count```값을 ```0```으로 초기화할 수 있다.
-- ```<buttononClick={()=>setCount(count +1)}>``` : 사용자가 버튼 클릭을 하면 ```setCount``` 함수를 호출하여 state 변수를 갱신합니다. React는 새로운 ```count``` 변수를 ```Example``` 컴포넌트에 넘기며 해당 컴포넌트를 리렌더링합니다.
+- ```<button onClick={() => setCount(count +1)}>``` : 사용자가 버튼 클릭을 하면 ```setCount``` 함수를 호출하여 state 변수를 갱신합니다. React는 새로운 ```count``` 변수를 ```Example``` 컴포넌트에 넘기며 해당 컴포넌트를 리렌더링합니다.
 
 
 ## Effect hook 
