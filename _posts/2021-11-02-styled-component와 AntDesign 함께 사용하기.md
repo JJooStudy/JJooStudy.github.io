@@ -33,20 +33,6 @@ export const GlobalStyle = createGlobalStyle`
 
 ```
 
-#### Ant Design의 컬러 셋팅하기 
-
-설치 
-
-`npm install @ant-design/colors`
-
-사용방법 
-
-`import {  } from '@ant-design/colors';`
-
-아래 문서 참고하여 원하는 컬러를 import 하면 된다. 
-
-[Ant Design color 공식문서](https://ant.design/docs/spec/colors#Neutral-Color-Palette)
-
 
 #### styled-component로 오버라이딩해서 커스텀하기 
 
@@ -77,4 +63,45 @@ const SiderStyle = styled(Sider)`
 
 
 
+#### Ant Design의 컬러 셋팅하기 
 
+설치 
+
+`npm install @ant-design/colors`
+
+사용방법 
+
+`import {  } from '@ant-design/colors';`
+
+아래 문서 참고하여 원하는 컬러를 import 하면 된다. 
+
+[Ant Design color 공식문서](https://ant.design/docs/spec/colors#Neutral-Color-Palette)
+
+
+#### Styled-component에서 Ant Design 컬러 적용하기 
+
+```react
+import React from 'react';
+// ant design
+import { Layout } from 'antd';
+const { Sider } = Layout;
+import { grey } from '@ant-design/colors'; 
+// styled-component
+import styled from 'styled-components';
+
+function Siders() {
+  return <SiderStyle>sider</SiderStyle>;
+}
+console.log(grey);
+export default Siders;
+
+const SiderStyle = styled(Sider)`
+  background-color: ${grey[1]};
+`;
+```
+
+- `import { grey } from '@ant-design/colors';` : color 팔레트(모음) 불러오기 
+- `console.log(grey);`: 콘솔로 찍어보면 해당 컬러 팔레트의 코드배열이 찍힌다. 
+- `${grey[1]};` : 거기서 원하는 컬러값 확인 후 적용
+
+![console.log(grey); 했을 때 ](/images/img_antDesign_greycolor_console.png)
