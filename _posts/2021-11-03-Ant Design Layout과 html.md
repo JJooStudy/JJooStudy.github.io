@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "react에서 Ant Design 사용하기"
+title:  "Ant Design Layout과 html"
 author: "JJoo"
 comments: true
 tags: antDesign
