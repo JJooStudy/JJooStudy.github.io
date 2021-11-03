@@ -22,7 +22,7 @@ Ant Design Layout의 각 컴포넌트들이 어떤 html 태그로 만들어지�
 
 #### Ant Design Layout - Header 
 
-```
+```react
 import { Layout } from 'antd';
 const { Header } = Layout;
 ```
@@ -32,7 +32,7 @@ html `<header></header>`
 
 #### Ant Design Layout - Footer
 
-```
+```react
 import { Layout } from 'antd';
 const { Footer } = Layout;
 ```
@@ -42,7 +42,7 @@ html `<footer></footer>`
 
 #### Ant Design Layout - Layout
 
-```
+```react
 import { Layout } from 'antd';
 ```
 
@@ -51,7 +51,7 @@ html `<section></section>`
 
 #### Ant Design Layout - Content
 
-```
+```react
 import { Layout } from 'antd';
 const { Content } = Layout;
 ```
@@ -61,7 +61,7 @@ html `<main></main>`
 
 #### Ant Design Layout - Sider
 
-```
+```react
 import { Layout } from 'antd';
 const { Sider } = Layout;
 ```
