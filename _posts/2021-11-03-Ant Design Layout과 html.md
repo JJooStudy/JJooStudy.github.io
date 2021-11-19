@@ -69,7 +69,47 @@ const { Sider } = Layout;
 html `<aside></aside>`
 
 
+#### Ant Design Typography - Title
+
+```react
+import { Typography } from 'antd';
+const { Title } = Typography;
+...
+
+<Title>h1</Title>
+<Title level={2}>h2</Title>
+<Title level={3}>h3</Title>
+<Title level={4}>h4</Title>
+<Title level={5}>h5</Title>
+
+```
+
+html
+```html
+  <h1>h1</h1>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <h4>h4</h4>
+  <h5>h5</h5>
+```
 
 
-나머지는 차차 추가할 예정 
+#### Ant Design Typography - Text
+
+```react
+import { Typography } from 'antd';
+const { Text } = Typography;
+```
+
+html `<span></span>`
+
+antd의 `<Space>`로 감싸진 `<Text>`는 `<div><span></span></div>`의 형태로 그려지고, 
+
+`<Space>`로 감싸지지 않은 `<Text>`는 `<span></span>`으로 그려진다. 
+
+필요에 따라 `<Text as="p"></Text>`로 사용하면 편하다. 
+
+
+
+또 특이한 부분이 있으면 추가할 예정 
 
