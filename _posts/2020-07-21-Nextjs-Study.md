@@ -3,7 +3,7 @@ layout: post
 title:  "Next.js Study "
 author: "JJoo"
 comments: true
-tags: Next.js
+tags: next.js
 ---
 
 ## 스터디 목표
