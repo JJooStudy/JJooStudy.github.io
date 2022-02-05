@@ -4,7 +4,7 @@
 # Site settings
 title:          JJoostudy
 description:    "JJoostudy"
-baseurl:        "/"
+baseurl:        ""
 url:            "https://jjoostudy.github.io/"
 
 # Google Analytics
