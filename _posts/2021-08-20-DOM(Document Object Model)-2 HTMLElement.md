@@ -7,6 +7,10 @@ tags: Javascript
 ---
 
 
+> 인프런 웹브라우저 Javascript 강의를 들으면서 정리한 내용입니다. 
+
+
+
 ## HTMLElement
 
 ![DOM_HTMLElement](/images/img_DOM_HTMLElement.png)
