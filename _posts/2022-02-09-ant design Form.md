@@ -37,9 +37,7 @@ Ant design이 디자인이 예쁘게 잘 잡혀있고, 다양한 컴포넌트를
 ``` 
 구조에 대한 설명은 일단 넘어가도록 하고 
 
-styled-component를 사용하여 `/components/common/input/inputStyle.tsx`에서 antd의 `Input`을 `import`해서 css 수정을 했고, 
-
-`/page/pageName/index.tsx`에서 antd의 `Form`을 `import`해서 사용했다. 
+styled-component를 사용하여 `/components/common/input/inputStyle.tsx`에서 antd의 `Input`을 `import`해서 css 수정을 했고, `/page/pageName/index.tsx`에서 antd의 `Form`을 `import`해서 사용했다. 
 
 #### 첫번째 문제 
 
