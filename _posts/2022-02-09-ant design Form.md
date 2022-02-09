@@ -81,7 +81,7 @@ const tableData = [
 ```
 이렇게 `tableData`를 만들어서 
 
-```
+```react
 {
   tableData.map((raw)=>{ 
     return (
@@ -100,7 +100,7 @@ const tableData = [
 
 로 `Form raw`를 뿌려줬고 `{...}` 에는 `name`값에 따라 다른 포맷으로 표출되도록 조건부 렌더링 설정을 해주었다. 
 
-```
+```react
 <Form
     ... 
     initialValues = {{
@@ -112,6 +112,8 @@ const tableData = [
     }}
     ...
   >
+    ...
+  </Form.Item>
 ```
 
 이렇게 `initialValues`을 설정해주었다. 
