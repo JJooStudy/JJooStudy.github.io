@@ -103,7 +103,7 @@ const tableData = [
 ```
 <Form
     ... 
-    initialValues={{
+    initialValues = {{
       image_1: 'image_1',
       image_2: 'image_2',
       multi_input: 'multi_input',
