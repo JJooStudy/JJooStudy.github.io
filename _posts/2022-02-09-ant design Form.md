@@ -111,8 +111,8 @@ const tableData = [
       input_2: placeData.address.jibeon,
     }}
   >
-    ...
-  </Form.Item>
+  ...
+</Form.Item>
 ```
 
 이렇게 `initialValues`을 설정해주었다. 
