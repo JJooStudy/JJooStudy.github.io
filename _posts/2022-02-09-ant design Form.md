@@ -103,14 +103,13 @@ const tableData = [
 ```react
 <Form
     ... 
-    initialValues = {{
+    initialValues={{
       image_1: 'image_1',
       image_2: 'image_2',
       multi_input: 'multi_input',
       input_1: placeData.address.jibeon,
       input_2: placeData.address.jibeon,
     }}
-    ...
   >
     ...
   </Form.Item>
