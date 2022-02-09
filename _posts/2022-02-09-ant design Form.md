@@ -100,16 +100,17 @@ const tableData = [
 
 로 `Form raw`를 뿌려줬고 `{...}` 에는 `name`값에 따라 다른 포맷으로 표출되도록 조건부 렌더링 설정을 해주었다. 
 
-```react
+```
 <Form
-    ... 
-    initialValues={{
+    initialValues={
+    {
       image_1: 'image_1',
       image_2: 'image_2',
       multi_input: 'multi_input',
       input_1: placeData.address.jibeon,
       input_2: placeData.address.jibeon,
-    }}
+    }
+    }
   >
   ...
 </Form.Item>
