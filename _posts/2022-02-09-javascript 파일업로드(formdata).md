@@ -10,7 +10,7 @@ tags: Javascript
 
 file은 json에 포함될 수가 없어서 javascript로 파일업로드를 할때는 `Formdata`를 사용해서 업로드를 한다. 
 
-```javascript
+```
 <input type="file" onChange={handleChane}/>
 
 const handleChane = (e) =>{
