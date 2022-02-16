@@ -170,6 +170,9 @@ export default function Google() {
 
 편집시 마우스 오른쪽 클릭 시 꼭지점이 바로 삭제되도록 구현했다. 
 
+[폴리곤 삭제 관련 공식문서](https://developers.google.com/maps/documentation/javascript/examples/delete-vertex-menu?hl=ko)
+
+클릭한 점이 배열의 몇번째 인지 `e.vertex`로 조회할 수 있다.
 
 ```react 
 import React, { useCallback, useEffect, useRef, useState } from "react";
