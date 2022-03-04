@@ -109,18 +109,18 @@ var lauraClone4 = new Person.prototype.constructor('로라_복제4', 15);
 
 즉, 4가지 방법으로 생성자 함수의 prototype에 접근할 수 있다. 
 
-- instance.__proto__
-- instance
-- Object.getPrototypeOf(instance)
-- Constructor.prototype
+- `instance.__proto__`
+- `instance`
+- `Object.getPrototypeOf(instance)`
+- `constructor.prototype`
 
 또 아래 5가지 방식으로 생성자 함수에 접근할 수 있다는 말이 된다. 
 
-- Constructor
-- instance.__proto__.constructor
-- instance.constructor
-- Object.getPrototypeOf(instance).constructor
-- Constructor.prototype.constructor
+- `constructor`
+- `instance.__proto__.constructor`
+- `instance.constructor`
+- `Object.getPrototypeOf(instance).constructor`
+- `constructor.prototype.constructor`
 
 ## 메소드  상속 및 동작 원리 
 
