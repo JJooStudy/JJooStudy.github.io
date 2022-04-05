@@ -22,6 +22,14 @@ git commit을 취소하는 방법에는 몇가지가 있다.
 git reset --soft HEAD^
 ```
 
+`git reset --soft HEAD^`시 `More?` 하고 묻는 경우가 있다. 
+
+`git reset --soft HEAD~1`로 갯수를 명시해주면 묻지 않고 작동한다. 
+
+`git reset --soft HEAD^^` 이렇게 ^을 두번 써줘도 된다고 한다. (사용해보지는 않았다.)
+
+
+
 #### commit을 취소하고 해당 파일들을 unstaged 상태로 돌리기 
 
 ```bash
@@ -43,3 +51,5 @@ git reset --hard HEAD^
 ```
 
 `--hard`는 작업물을 모두 삭제하는, 작업의 이전 상태로 돌리게 되니 주의해서 사용해야 한다. 
+
+
