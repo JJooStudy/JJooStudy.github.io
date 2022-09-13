@@ -36,7 +36,10 @@ graphQl이 정상적으로 설치가 되었다면 아래 링크로 접속이 된
 
 ![strapi graphql main](/images/img_strapi_graphql_main.png "strapi graphql main")
 
+아래처럼 원하는 데이터를 뽑아 설정해줄 수 있다. 
 
+![strapi graphql](/images/img_strapi_graphql_query.png "strapi graphql")
 
+프론트에서 위처럼 쿼리를 원하는 대로 받아와 쓰려면 apollo를 사용하여 추가 설정이 필요하다 
 
 
