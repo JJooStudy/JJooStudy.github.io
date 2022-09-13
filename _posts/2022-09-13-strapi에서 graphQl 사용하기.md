@@ -20,7 +20,7 @@ strapi admin의 marketplace에서 graphQl을 찾을 수 있다.
 npm install @strapi/plugin-graphql
 ```
 
-[관련 plugin link](https://market.strapi.io/plugins/@strapi-plugin-graphql).
+[관련 plugin document link](https://market.strapi.io/plugins/@strapi-plugin-graphql).
 
 > 여기서 한가지 문제가 있다. 
 > strapi 작업을 진행하던 중에 graphQl을 설치하게 되면 npm 모듈 중 어느 부분과 충돌(?)하여 설치가 중단된다. 
