@@ -15,6 +15,13 @@ strapi에서 제공하는 문서를 토대로 작업했다.
 
 서버에 git과 nodejs가 모두 구성되어 있고 strapi 프로젝트가 github에 올라가있는 상황에서부터 시작하는 글이다. 
 
+strapi 프로젝트 구현은 아래 게시글을 참고
+
+[strapi 시작하기](https://jjoostudy.github.io/2022-08-30/strapi-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)
+
+[strapi api 사용하기](https://jjoostudy.github.io/2022-09-14/strapi-api-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)
+
+
 ## 서버에 strapi 프로젝트 올리기 
 
 ### 1. pg 패키지 설치 
