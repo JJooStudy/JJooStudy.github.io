@@ -193,12 +193,5 @@ pm2 start ecosystem.config.js
 이제 ```http://ubuntu서버주소:1337/``` 로 접근해 strapi를 사용할 수 있다. 
 
 
-ps.... 
-
-해당 서버의 strapi 프로젝트에서 documents 사용 시 server가 0.0.0.0:1337로 접근해 cors 에러가 발생한다. 
-
-
-
-
 
 
