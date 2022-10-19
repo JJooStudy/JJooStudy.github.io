@@ -96,7 +96,7 @@ module.exports = ({ env }) => ({
 
 ### 3.github에서 EC2 인스턴스에 배포
 
-위 내용까지 반영된 git을 서버에 배포한다.
+위 내용까지 반영된 git repo를 서버에 배포한다.
 
 PuTTY로 aws 서버에 붙는 다. 
 
@@ -118,7 +118,9 @@ NODE_ENV=production npm run build
 
 pm2란 ? 
 
-node.js 로 만들어진 앱을 쉽게 관리할 수 있게 해주는 Process Manager이다. 
+Process Manager의 약어이고,
+
+프로세스들이 계속 실행될 수 있는 환경을 제공해주는 등 node.js 로 만들어진 앱을 쉽게 관리할 수 있게 해준다.
 
 pm2 runtime을 사용해서 strapi 프로젝트를 유지하고 downtime 없이 reload 할 수 있다. 
 
