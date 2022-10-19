@@ -195,11 +195,7 @@ pm2 start ecosystem.config.js
 
 ps.... 
 
-aws 배포 후 프론트에서 해당 서버에 접근 시 500 에러가 발생한다. 
-
-permission 관련으로 접근이 안되는 것 같은 데 아직 해결 못 했다. 
-
-또 해당 서버의 strapi 프로젝트에서 documents 사용 시 server가 0.0.0.0:1337로 접근해 cors 에러가 발생한다. 
+해당 서버의 strapi 프로젝트에서 documents 사용 시 server가 0.0.0.0:1337로 접근해 cors 에러가 발생한다. 
 
 
 
