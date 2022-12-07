@@ -30,6 +30,8 @@ localhost로 개발을 하다 도메인으로 띄워야 하는 상황이 생겨�
 
 etc 파일에 들어가면 아무것도 보이지 않지만 오른쪽 하단에 모든 파일로 선택해주면 여러 설정  파일들이 보여진다. 
 
+![img_window_host_file_setting_03](/images/img_window_host_file_setting_03.png 'img_window_host_file_setting_03')
+
 그 중 host 파일을 열여준다. 
 
 
