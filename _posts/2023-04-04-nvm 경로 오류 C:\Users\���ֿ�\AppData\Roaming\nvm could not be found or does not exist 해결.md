@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "nvm 경로 오류 "
+author: "JJoo"
+comments: true
+tags: nvm
+---
+
+# nvm 경로 오류  
+
+storybook 설치 중 node version 16 이상이 필요함을 마주했다.
+
+프로젝트별 node 버전 관리를 최대한 피하고 싶었으나 ... (귀찮)
+
+어쩔 수 없이 nvm으로 node 버전을 관리하기로 하고 nvm을 설치했다. 
+
+그러고 nvm 설치 확인 차 `npm list` 실행하니 마주한 에러
+
+```
+C:\Users\���ֿ�\AppData\Roaming\nvm could not be found or does not exist
+```
+
+입사하고 별 생각없이 설정한 한글이름으로 인한 한글이름의 폴더 때문이었다. 
+
+중간에도 한글폴더가 들어간 경로 때문에 폴더명을 변경하려고 했으나 여러가지 번거로움에 포기. 
+
+이번에 다시 window 한글폴더명 변경을 하지 않고 할 수 있는 쉬운 해결법을 찾았다. 
+
+# nvm 한글경로 인코딩 깨짐 문제 해결
+
+nvm이 설치된 경로에서 한글이 인코딩이 깨지면서 발생한 문제라서 nvm root를 다시 설정해주면 문제 해결 !! 
+
+```
+nvm root C:\Users\[해당폴더명]\AppData\Roaming\nvm
+```
+
+아주 간단히 해결됐다. 
+
+[]안에 해당 폴더명을 한글로 써주고 설정해주면 nvm이 경로를 제대로 인식하고 정상 작동한다. 
+
+
+
+
+### 참고 
+
+[https://github.com/coreybutler/nvm-windows/issues/334](https://github.com/coreybutler/nvm-windows/issues/334)
+
+
+
+
+
