@@ -9,8 +9,10 @@ tags: storybook next.js
 # storybook이란? 
 
 storybook이란 ui component 개발 도구로 
-분리되어 있는 ui component를 분리된 환경에서 체계적이고 효율적으로 개발할 수 있고 
+ui component를 분리된 환경에서 체계적이고 효율적으로 개발할 수 있고 
 간편하게 문서화 시켜주기 때문에 관리에 용이하다.
+
+또 독립된 환경에서 컴포넌트별 테스트가 용이하다. 
 
 주로 디자인 시스템 개발 혹은 사내 ui 라이브러리 문서로 사용된다고 한다. 
 
