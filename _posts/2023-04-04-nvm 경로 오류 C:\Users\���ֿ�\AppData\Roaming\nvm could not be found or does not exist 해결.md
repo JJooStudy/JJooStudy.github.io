@@ -1,10 +1,18 @@
 ---
 layout: post
-title:  "nvm 경로 오류 "
+title:  "nvm 경로 오류 해결 및 윈도우 설치 방법"
 author: "JJoo"
 comments: true
 tags: nvm
 ---
+
+
+# 윈도우에서 nvm 설치방법 
+
+아래 링크에서 `nvm-setup.zip` 파일을 설치하면 된다. 
+
+[https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases)
+
 
 # nvm 경로 오류  
 
