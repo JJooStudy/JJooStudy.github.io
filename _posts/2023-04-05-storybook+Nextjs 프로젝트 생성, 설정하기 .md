@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "storybook+Nextjs 프로젝트 생성하기"
+title:  "storybook+Nextjs 프로젝트 생성, 설정하기"
 author: "JJoo"
 comments: true
 tags: storybook next.js
@@ -64,6 +64,55 @@ npm run storybook
 
 스토리북을 실행했을 때 브라우저에 잘 뜨면 초기 셋팅은 성공이다. 
 
+
+# storybook 의 기본 폴더 구조 
+
+처음 nextjs 프로젝트에 storybook을 설치하면 아래와 같은 구조를 가지고 있다. 
+
+```bash
+├─ .storybook
+│  ├─ main.ts
+│  └─ preview.ts
+├─ src 
+│  ├─ src
+│  │  ├─ pages
+│  │     └─ ...
+│  │  └─ stories
+│  │     ├─ assets
+│  │     ├─ button.css
+│  │     ├─ button.stories.ts
+│  │     ├─ button.tsx
+│  │     ├─ ...
+│  │     └─ introduction.mdx
+│  ├─ styles
+│     ├─ ...
+
+```
+
+이 구조를 nextjs에 맞게 구조를 변경해서 사용했다. 
+
+
+```bash
+├─ .storybook
+│  ├─ main.ts
+│  └─ preview.ts
+├─ src 
+│  ├─ src
+│  │  ├─ components
+│  │     └─ ...
+│  │  ├─ pages
+│  │     └─ ...
+│  │  └─ stories
+│  │     ├─ assets
+│  │     ├─ button.css
+│  │     ├─ button.stories.ts
+│  │     ├─ button.tsx
+│  │     ├─ ...
+│  │     └─ introduction.mdx
+│  ├─ styles
+│     ├─ ...
+
+```
 
 
 ## 참조 
