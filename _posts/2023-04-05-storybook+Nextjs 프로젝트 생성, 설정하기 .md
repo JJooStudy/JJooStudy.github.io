@@ -89,7 +89,7 @@ npm run storybook
 
 ```
 
-이 구조를 nextjs에 맞게 구조를 변경해서 사용했다. 
+이 구조를 nextjs에 맞게 구조를 변경해서 사용하려고 한다. 
 
 
 ```bash
