@@ -78,6 +78,16 @@ export const decorators = [
 아직 라이트/다크 모드에 대한 설정을 추가 하지 않았기 때문에 모두 `theme`로 일단 설정해 기본 설정을 마쳤다. 
 
 
+# global-style.ts에서 theme에 대한 DefaultTheme 오류 
+
+ThemeProvider까지 잘 적용하고 나도 global-style.ts에서 `const { colors } = theme;`으로 불러오는 `colors`에 아래와 같은 에러 메세지가 뜬다. 
+
+```
+Property 'colors' does not exist on type 'DefaultTheme'.
+```
+
+이 에러는 `theme.ts`에서 `import { DefaultTheme } from 'styled-components';` 에서 경로를 `import { DefaultTheme } from 'styled-components/native';`로 변경해주면 해결된다. 
+
 
 
 
