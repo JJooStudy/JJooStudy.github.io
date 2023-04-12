@@ -76,7 +76,7 @@ npm run storybook
 ├─ src 
 │  ├─ src
 │  │  ├─ pages
-│  │     └─ ...
+│  │  │  └─ ...
 │  │  └─ stories
 │  │     ├─ assets
 │  │     ├─ button.css
@@ -85,7 +85,7 @@ npm run storybook
 │  │     ├─ ...
 │  │     └─ introduction.mdx
 │  ├─ styles
-│     ├─ ...
+│  │  ├─ ...
 
 ```
 
@@ -99,18 +99,20 @@ npm run storybook
 ├─ src 
 │  ├─ src
 │  │  ├─ components
-│  │     └─ ...
+│  │  │  ├─ button
+│  │  │  │  ├─ button.css
+│  │  │  │  ├─ button.stories.ts
+│  │  │  │  ├─ button.tsx
+│  │  │  │  └─ ...
+│  │  │  └─ ...
 │  │  ├─ pages
-│  │     └─ ...
+│  │  │  └─ ...
 │  │  └─ stories
 │  │     ├─ assets
-│  │     ├─ button.css
-│  │     ├─ button.stories.ts
-│  │     ├─ button.tsx
 │  │     ├─ ...
 │  │     └─ introduction.mdx
 │  ├─ styles
-│     ├─ ...
+│  │  ├─ ...
 
 ```
 
