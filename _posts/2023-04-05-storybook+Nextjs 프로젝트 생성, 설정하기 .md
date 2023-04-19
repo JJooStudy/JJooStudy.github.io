@@ -116,6 +116,86 @@ npm run storybook
 
 ```
 
+# storybook의 전역 설정 
+
+next.js 프로젝트에 storybook을 셋팅해서 사용하지만 storybook에 대한 전역 설정은 주로 `.storybook/main.ts`와 `.storybook/preview.ts`에 설정해준다. 
+
+global.css 라던지 절대경로 설정 등등 
+
+## storybook의 전역 스타일 설정 
+
+storybook에서 전역으로 스타일을 설정해주려면 `.storybook/preview.ts`에 스타일 파일을 import 해줘야 한다. 
+
+#### 전역 css 를 설정하는 방법 
+
+```
+import type { Preview } from "@storybook/react";
+import '../src/styles/globals.css' // 전역으로 적용할 스타일 파일 import 
+
+
+const preview: Preview = {
+  ...
+};
+
+export default preview;
+
+```
+
+#### 전역 scss 를 설정하는 방법 
+
+```
+import type { Preview } from "@storybook/react";
+import '../src/styles/global-style.scss'
+import '../src/styles/themes.scss'
+
+const preview: Preview = {
+  ...
+};
+
+export default preview;
+
+```
+
+**scss의 변수를 전역으로 불러오게끔 설정하려면 여러가지 방법이 있는 데 ... scss 변수를 전역으로 불러오기 위한 설정은 `preview.ts`나 `main.ts`로 설정이 가능하지 않았다. 이는 다른 포스트에서 설명하려고 한다.** 
+
+ `main.ts`의 `webpackFinal`에서 loader 관련 설정을 추가하는 등의 여러 방법으로 삽질을 하였으나 결론은 next.config.json에서 해결함 ... 
+
+
+#### styled-components Provider 설정
+
+styled-components의 Provider를 적용하려면 `page/_app.tsx`가 아닌 `.storybook/preview.ts`에 아래처럼 설정을 해줘야 한다. 
+
+```
+// .storybook/preview.ts
+
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyle } from '../src/styles/global-style';
+import { theme } from '../src/styles/theme';
+import { withThemeFromJSXProvider } from "@storybook/addon-styling";
+
+export const decorators = [
+  withThemeFromJSXProvider({
+    themes: {
+      light: theme,
+      dark: theme,
+    },
+    defaultTheme: "light",
+    Provider: ThemeProvider,
+    GlobalStyles: GlobalStyle,
+  }),
+];
+```
+
+
+자세히 보려면 아래 링크 참고. 
+
+[storybook에 styled-components 적용하기](https://jjoostudy.github.io/2023-04-12/storybook%EC%97%90-styled-components-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
+
+
+
+## storybook의 절대경로 설정 
+
+
 
 ## 참조 
 [storybook 공식문서](https://storybook.js.org/blog/get-started-with-storybook-and-next-js/)
