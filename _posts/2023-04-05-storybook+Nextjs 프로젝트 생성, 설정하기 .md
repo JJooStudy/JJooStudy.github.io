@@ -74,16 +74,15 @@ npm run storybook
 │  ├─ main.ts
 │  └─ preview.ts
 ├─ src 
-│  ├─ src
-│  │  ├─ pages
-│  │  │  └─ ...
-│  │  └─ stories
-│  │     ├─ assets
-│  │     ├─ button.css
-│  │     ├─ button.stories.ts
-│  │     ├─ button.tsx
-│  │     ├─ ...
-│  │     └─ introduction.mdx
+│  ├─ pages
+│  │  └─ ...
+│  ├─ stories
+│  │  ├─ assets
+│  │  ├─ button.css
+│  │  ├─ button.stories.ts
+│  │  ├─ button.tsx
+│  │  ├─ ...
+│  │  └─ introduction.mdx
 │  ├─ styles
 │  │  ├─ ...
 
@@ -97,20 +96,19 @@ npm run storybook
 │  ├─ main.ts
 │  └─ preview.ts
 ├─ src 
-│  ├─ src
-│  │  ├─ components
-│  │  │  ├─ button
-│  │  │  │  ├─ button.css
-│  │  │  │  ├─ button.stories.ts
-│  │  │  │  ├─ button.tsx
-│  │  │  │  └─ ...
+│  ├─ components
+│  │  ├─ button
+│  │  │  ├─ button.css
+│  │  │  ├─ button.stories.ts
+│  │  │  ├─ button.tsx
 │  │  │  └─ ...
-│  │  ├─ pages
-│  │  │  └─ ...
-│  │  └─ stories
-│  │     ├─ assets
-│  │     ├─ ...
-│  │     └─ introduction.mdx
+│  │  └─ ...
+│  ├─ pages
+│  │  └─ ...
+│  ├─ stories
+│  │  ├─ assets
+│  │  ├─ ...
+│  │  └─ introduction.mdx
 │  ├─ styles
 │  │  ├─ ...
 
@@ -194,6 +192,56 @@ export const decorators = [
 
 
 ## storybook의 절대경로 설정 
+
+storybook에서의 절대경로 설정은 일단 tsconfig.json에 다른 typescript 프로젝트들에서 절대경로를 설정해주는 것 처럼 설정해준다. 
+
+```
+{
+    ...
+    "baseUrl": "./",
+    "paths": {
+      "@*": ["./src/*"],
+      "@pages/*": ["src/pages/*"],
+      "@styles/*": ["src/styles/*"],
+      "@components/*": ["src/components/*"],
+    }
+  },
+  "include": [
+    "next-env.d.ts", 
+    "**/*.ts", 
+    "**/*.tsx",
+    "**/*.config.js",
+    "./src",
+    ".eslintrc",
+  ], 
+  ...
+}
+
+```
+
+그러고 ```.storybook/main.ts``` 파일에서도 절대경로에 대한 설정을 추가해준다. 
+
+```
+import path from "path";
+
+module.exports = {
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  addons: [
+    ...
+  ],
+  ...
+  webpackFinal: async (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@src": path.resolve(__dirname, "../src"),
+      "@styles": path.resolve(__dirname, "../src/styles"),
+      "@components": path.resolve(__dirname, "../src/components"),
+    };
+    return config;
+  },
+};
+
+```
 
 
 
