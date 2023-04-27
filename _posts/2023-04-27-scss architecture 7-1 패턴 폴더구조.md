@@ -81,3 +81,11 @@ scss/
   - 외부 라이브러리 스타일 
   - bootstrap, jquery 등 
 
+
+7-1패턴이라고 해서 7가지를 모두 만들어 사용할 필요는 없고 위 폴더구조를 기반으로 프로젝트에 필요한 폴더만 만들어서 관리하면 된다. 
+
+
+#### 참고 
+
+[scss 가이드라인 - architecture](https://sass-guidelin.es/#architecture)
+
