@@ -61,7 +61,7 @@ scss/
   - mixins 믹스인만 모아놓은 파일
   - functions function만 모아놓은 파일
 - base 
-  - 프로젝트에 전체적으로 사용되는.
+  - 프로젝트에 전체적으로 사용되는 재설정, 표준 스타일 정의 등 의 역할 
   - reset.scss 
   - global.scss
   - typography.scss
@@ -76,7 +76,7 @@ scss/
   - home, contact 등 
 - themes
   - 모드별 스타일 관리
-  - styled-components를 사용할 때는 theme.ts에서 color와 media query등을 관리했었는 데 scss에서 media query는 mixin으로 빼면 될 듯 
+  - styled-components를 사용할 때는 theme.ts에서 color와 media query등을 관리했었는 데 scss에서 media query는 layout으로 들어가야 할 것 같다.
 - vendors
   - 외부 라이브러리 스타일 
   - bootstrap, jquery 등 
