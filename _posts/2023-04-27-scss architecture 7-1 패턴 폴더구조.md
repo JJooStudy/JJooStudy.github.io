@@ -83,7 +83,17 @@ scss/
 - main.scss 
   - 위의 폴더들의 scss를 import해주는 root scss 
   - 다른 scss 파일들을 import 하는 용도로만 사용하고 줄바꿈으로 폴더별을 구분한다. 
- 
+
+또 아래 폴더 순서로 import 해야 한다고 한다. 
+
+1. abstracts/
+2. vendors/
+3. base/
+4. layout/
+5. components/
+6. pages/
+7. themes/
+
  ex. 
  ```
  // main.scss 
