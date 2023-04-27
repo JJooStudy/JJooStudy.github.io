@@ -80,6 +80,27 @@ scss/
 - vendors
   - 외부 라이브러리 스타일 
   - bootstrap, jquery 등 
+- main.scss 
+  - 위의 폴더들의 scss를 import해주는 root scss 
+  - 다른 scss 파일들을 import 하는 용도로만 사용하고 줄바꿈으로 폴더별을 구분한다. 
+ 
+ ex. 
+ ```
+ // main.scss 
+ 
+ @import 'abstracts/_variables.scss'
+ @import 'abstracts/_mixins.scss'
+ @import 'abstracts/_functions.scss'
+ 
+ @import 'base/_reset.scss'
+ 
+ @import 'components/_button.scss'
+ @import 'components/_select.scss'
+ 
+ @import 'themes/_themes.scss'
+ ...
+ 
+ ```
 
 
 7-1패턴이라고 해서 7가지를 모두 만들어 사용할 필요는 없고 위 폴더구조를 기반으로 프로젝트에 필요한 폴더만 만들어서 관리하면 된다. 
