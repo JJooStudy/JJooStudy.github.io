@@ -53,14 +53,31 @@ scss/
  └─ main.scss
 ```
 
-- abstracts
-  -  
-- base 
-  - 
-components/
-layout/
-pages/
-themes/
+### 구조별 설명 
 
-vendors/
+- abstracts
+  - 다른 파일을 도와주는 역할 
+  - variables.scss 변수를 담은 파일 
+  - mixins 믹스인만 모아놓은 파일
+  - functions function만 모아놓은 파일
+- base 
+  - 프로젝트에 전체적으로 사용되는.
+  - reset.scss 
+  - global.scss
+  - typography.scss
+- components 
+  - 컴포넌트별 스타일
+  - button, input, select 등   
+- layout
+  - 프로젝트 구조를 다루는 역할
+  - header, footer, sider, nav 등 
+- pages
+  - 각 페이지에서만 사용되는 스타일
+  - home, contact 등 
+- themes
+  - 모드별 스타일 관리
+  - styled-components를 사용할 때는 theme.ts에서 color와 media query등을 관리했었는 데 scss에서 media query는 mixin으로 빼면 될 듯 
+- vendors
+  - 외부 라이브러리 스타일 
+  - bootstrap, jquery 등 
 
