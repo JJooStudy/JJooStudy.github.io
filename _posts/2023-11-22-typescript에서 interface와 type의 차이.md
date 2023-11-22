@@ -110,6 +110,47 @@ interface blaInterface {
 interface blablaInterface extands blaInterface {
   onClick?: () => void;
 }
-
 ```
+
+위 예시 code처럼 type의 확장은 `&`를 사용하고 interface의 확장은 `extends`를 사용한다. 
+
+여기까지만 봐도 선언 방법 빼고는 확장도 큰 차이가 없다. 
+
+하지만 가장 큰 차이점이 하나 있다. 
+
+### interface의 선언적 확장 
+
+type은 새로운 속성을 추가하기 위해서는 다른 이름으로 선언하여 기존 속성을 확장(상속) 시켜주면서 새로운 속성을 추가해야 하지만 
+
+interface는 같은 이름으로 선언을 하면서 새로운 속성을 추가할 수가 있다. 
+
+```javascript
+// 불가능 
+type blaType = {
+  id: string;
+  label: string;
+}
+type blaType = {
+  onClick?: () => void;
+}
+
+// 가능
+interface blaInterface {
+  id: string;
+  label: string;
+}
+interface blaInterface {
+  onClick?: () => void;
+}
+```
+
+interface는 같은 `blaInterface`으로 선언하면 `blaInterface`에 선언한 모든 타입이 담겨진다. 
+
+## 그래서 interface와 type 중 뭐가 좋아? 
+
+사실 interface와 type 중 뭐가 좋다고 할 순 없는 것 같다. 
+
+필요한 기능에 따라서 상황에 맞게 type과 interface를 사용하면 될 것 같다. 
+
+하지만 같이 일하는 협업 개발자들끼리는 코드 컨벤션처럼 규칙을 정하고 맞춰서 사용하는 게 혼돈을 주지 않을 듯 싶다. 
 
