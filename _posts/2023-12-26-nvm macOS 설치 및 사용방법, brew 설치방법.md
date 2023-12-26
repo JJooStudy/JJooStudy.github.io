@@ -53,6 +53,10 @@ brew를 이용해 nvm을 설치한다.
 brew install nvm
 ```
 
+설치 후 nvm도 환경변수 설정이 필요하다. 
+
+
+
 
 # nvm 사용방법 
 
