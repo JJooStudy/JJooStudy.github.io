@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "nvm 윈도우 설치 및 사용방법"
+title:  "nvm macOS 설치 및 사용방법, brew 설치방법"
 author: "JJoo"
 comments: true
 tags: nvm
@@ -55,7 +55,39 @@ brew install nvm
 
 설치 후 nvm도 환경변수 설정이 필요하다. 
 
+먼저 .nvm 파일을 생성한다.
 
+```
+mkdir ~/.nvm
+```
+
+vi 편집기로 .bash_profile 파일을 열어준다.
+
+```
+vi ~/.bash_profile
+```
+
+아래 코드를 .bash_profile 파일에 입력하고 :wq 명령어로 저장한다.
+
+( :wq 저장하고 나오기 :q 그냥 나오기)
+
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+```
+
+brew 환경변수를 반영한 것처럼 .bash_profile 파일을 환경변수에 적용한다.
+
+```
+source ~/.bash_profile
+```
+
+nvm 버전을 확인했을 때 버전이 잘 나오면 설치와 등록이 잘 된 것이다.
+
+```
+nvm -v
+```
 
 
 # nvm 사용방법 
