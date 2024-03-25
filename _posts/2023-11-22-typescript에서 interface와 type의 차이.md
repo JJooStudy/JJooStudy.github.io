@@ -107,7 +107,7 @@ interface blaInterface {
   label: string;
 }
 
-interface blablaInterface extands blaInterface {
+interface blablaInterface extends blaInterface {
   onClick?: () => void;
 }
 ```
